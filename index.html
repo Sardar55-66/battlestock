@@ -3,157 +3,531 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./src/sass/style.min.css">    
-    <link rel="stylesheet" href="./src/bootstrap-4.6/bootstrap.min.css">
-    <link rel="stylesheet" href="./src/bootstrap-4.6/bootstrap-grid.css">
-    <link rel="stylesheet" href="./src/bootstrap-4.6/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="./src/sass/battle-room-open.min.css">    
+    <link rel="stylesheet" href="/src/bootstrap-4.6/bootstrap.min.css">
+    <link rel="stylesheet" href="/src/bootstrap-4.6/bootstrap-grid.css">
+    <link rel="stylesheet" href="/src/bootstrap-4.6/bootstrap-reboot.min.css">
     <title>Battle Stock</title>
 </head>
 <body>
 
-    <div class="container-fluid main-container">
+    <div class="container-fluid main p-0">
 
-        <div class="container entire-container">
-            <div class="wrapper">
-                <div class="main-logo">
-                    <img src="./src/assets/logos/stock-battle-logo.png" alt="battleStockLogo">
+        <!-- сайдбар -->
+        <section class="sidebar sidebar-activation">
+            <header class="sidebar__header">
+                <div class="sidebar-avatar-id__wrapper">
+                    <div class="header__avatar">
+                        <img src="./src/assets/logos/avatar-icon.png" alt="avatar-icon">
+                    </div>
+                    <div class="header__name-id">
+                        <span class="name">Davis</span>
+                        <span class="id">ID <span class="id-number">12345678</span></span>
+                    </div>
                 </div>
-    
-                <div class="row">
+                <div class="header__account-verification">
+                    <span class="verification-warning">Account not verified</span>
+                    <a class="verify-now" href="#">Verify Now</a>
+                </div>
+            </header>
+
+            <div class="sidebar-menu-list w-100 ml-4">
+                <div class="row w-75 mb-2 mt-3">
+                    <div class="col first-col">
+                        <div class="sidebar-menu__icon">
+                            <img class="sidebar-menu__icon" src="./src/assets/icons/bank-icon.png" alt="bank-icon">
+                        </div>
+                        <div class="sidebar-menu__account-info">
+                            <a href="#" class="sidebar-menu__balance_title">Main Balance</a>
+                            <a href="#" class="sidebar-menu__balance">$1000</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row w-75 mb-2">
                     <div class="col">
-                        <h2 class="title">Join now for Real Money on</h2>
+                        <div class="sidebar-menu__icon">
+                            <img class="sidebar-menu__icon" src="./src/assets/icons/deposit-icon.png" alt="bank-icon">
+                        </div>
+                        <div class="sidebar-menu__btn-info">
+                            <a href="#" class="sidebar-menu__btn_title">Deposit</a>
+                        </div>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row w-75 mb-2">
                     <div class="col">
-                        <h2 class="subtitle">Live Casino stockbattle</h2>
+                        <div class="sidebar-menu__icon">
+                            <img class="sidebar-menu__icon" src="./src/assets/icons/withdraw-icon.png" alt="bank-icon">
+                        </div>
+                        <div class="sidebar-menu__btn-info">
+                            <a href="#" class="sidebar-menu__btn_title">Withdrawal</a>
+                        </div>
                     </div>
                 </div>
-
-
-                <!-- форма логина -->
-                <!-- <div class="row d-flex justify-content-center w-100">
-                    <form action="#" class="login login-form w-100">
-                                
-                        <div class="row">
-                            <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-md-end red-star">
-                                <label class="required"></label>
-                                <input id="login" class="login login__username" type="text" placeholder="Login">
-                            </div>
-                            
-                            <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-xl-start"> 
-                                <label class="required-2"></label>
-                                <input class="login login__pass" type="password" placeholder="Password">
-                            </div>
+                <div class="row w-75 mb-2">
+                    <div class="col">
+                        <div class="sidebar-menu__icon">
+                            <img class="sidebar-menu__icon" src="./src/assets/icons/transaction-icon.png" alt="bank-icon">
                         </div>
-                    
-                    <div class="col-lg w-50 mt-3 btn-submit">
-                        <input class="btn btn-warning mb-3 w-100 ta-center" type="submit" value="Join Now">
-                        <div class="register-link">If you are not yet registered, then go through the <a class="register-link registration" href="#">registration</a> first.</div>
-                    </div>
-                    
-            </form>
-                </div> -->
-
-                <!-- <div class="row d-flex justify-content-center w-100">
-                    <form action="#" class="login login-form w-100 registration-form">
-                                
-                        <div class="row">
-                            <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-md-end red-star mb-3">
-                                <label class="firstName-red-star"></label>
-                                <input id="login" class="login login__username" type="text" placeholder="First Name">
-                            </div>
-
-                            <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-md-start red-star mb-3">
-                                <label class="lastName-red-star"></label>
-                                <input id="login" class="login login__username" type="text" placeholder="Last Name">
-                            </div>
-                        </div>    
-
-                        <div class="row">
-                            <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-md-end red-star mb-3">
-                                <label class="nickName-red-star"></label>
-                                <input id="login" class="login login__username" type="text" placeholder="Nickname">
-                            </div>
-
-                            <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-md-start red-star mb-3">
-                                <label class="phone-red-star"></label>
-                                <input id="login" class="login login__username" type="tel" placeholder="Phone">
-                            </div>
-                        </div>
-                            
-                        <div class="row">
-                            <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-md-end red-star mb-3">
-                                <label class="required"></label>
-                                <input id="login" class="login login__username" type="email" placeholder="Email">
-                            </div>
-
-                            <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-md-start red-star mb-3">
-                                <label class="password-red-star"></label>
-                                <input id="login" class="login login__username" type="password" placeholder="Password">
-                            </div>
-                        </div>
-                        
-                    
-                    <div class="col-lg w-50 mt-3" style="margin: 0 auto;">
-                        <input class="btn btn-warning mb-3 w-100 ta-center" type="submit" value="Join Now">
-                    </div>
-                    <div class="age-confirmation-wrapper w-100">
-                        <input id="ch" type="checkbox" class="age-confirmation">
-                        <label class="age-confirmation-label" for="ch">I certify that I am 18 years or older</label>
-                    </div>
-                    
-            </form>
-                </div> -->
-           
-                <!-- <div class="row d-flex flex-column align-content-md-center w-100 info-wrapper">
-                                
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-sm col-md col-lg w-50 d-flex justify-content-center mb-5">
-                            <span class="registration-title">
-                                Successfully registered
-                            </span>
+                        <div class="sidebar-menu__btn-info">
+                            <a href="#" class="sidebar-menu__btn_title">Transactions</a>
                         </div>
                     </div>
-
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-sm col-md col-lg w-50 d-flex justify-content-center mb-5">
-                            <span class="registration-subtitle">
-                                You are now registered!
-                            </span>
+                </div>
+                <div class="row w-75 mb-2">
+                    <div class="col">
+                        <div class="sidebar-menu__icon">
+                            <img class="sidebar-menu__icon" src="./src/assets/icons/settings-icon.png" alt="bank-icon">
+                        </div>
+                        <div class="sidebar-menu__btn-info">
+                            <a href="#" class="sidebar-menu__btn_title">Personal settings</a>
                         </div>
                     </div>
-
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-sm col-md col-lg w-50 d-flex justify-content-center mb-3">
-                            <button class="deposit" type="submit">Deposit</button>
+                </div>
+                <div class="row w-75 mb-2">
+                    <div class="col">
+                        <div class="sidebar-menu__icon">
+                            <img class="sidebar-menu__icon" src="./src/assets/icons/my-battles-icon.png" alt="bank-icon">
+                        </div>
+                        <div class="sidebar-menu__btn-info">
+                            <a href="#" class="sidebar-menu__btn_title">My battles</a>
                         </div>
                     </div>
-
-                    <div class="row d-flex justify-content-center">
-                        <div class="col-sm col-md col-lg w-50 d-flex justify-content-center mb-5">
-                            <button class="deposit-ok" type="submit">Ok</button>
+                </div>
+                <div class="row w-75 mb-2">
+                    <div class="col">
+                        <div class="sidebar-menu__icon">
+                            <img class="sidebar-menu__icon" src="./src/assets/icons/leaderborad-icon.png" alt="bank-icon">
+                        </div>
+                        <div class="sidebar-menu__btn-info">
+                            <a href="#" class="sidebar-menu__btn_title">Leaderboard</a>
                         </div>
                     </div>
-                    
-            </div> -->
-            
+                </div>
+                <div class="row w-75 mb-2">
+                    <div class="col">
+                        <div class="sidebar-menu__icon">
+                            <img class="sidebar-menu__icon" src="./src/assets/icons/followers-icon.png" alt="bank-icon">
+                        </div>
+                        <div class="sidebar-menu__btn-info">
+                            <a href="#" class="sidebar-menu__btn_title">Followers</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row w-75 mb-2">
+                    <div class="col">
+                        <div class="sidebar-menu__icon">
+                            <img class="sidebar-menu__icon" src="./src/assets/icons/support-icon.png" alt="bank-icon">
+                        </div>
+                        <div class="sidebar-menu__btn-info">
+                            <a href="#" class="sidebar-menu__btn_title">Support</a>
+                        </div>
+                </div>
             </div>
+        </section>
 
-            <footer class="footer d-flex justify-content-end">
-                <div class="row d-flex justify-content-end">
-                    <div class="col footer-wrapper">
-                        <h3 class="footer__title">Regulations & Partners</h3>
-                        <div class="footer__logos">
-                            <img src="./src/assets/logos/footer-logos.png" alt="footer__logos">
-                        </div>
-                        <h3 class="footer__subtitle">© 2024 StockBattle.  All rights reserved.</h3>
-                    </div>
+                        <!-- шапка -->
+    
+        <header class="header">
+
+            <div class="row d-flex align-items-center justify-content-center">
+                <div class="col d-flex justify-content-center mt-3">
+                    <a href="#">
+                        <img src="./src/assets/logos/stock-battle-logo.png" alt="stock_battle-logo">
+                    </a>
                 </div>
-            </footer>
-           
-        </div>
+                <div class="col d-flex justify-content-center mt-3">
+                    <a href="#">
+                        <img src="./src/assets/logos/battle-room-logo.png" alt="battle_room-logo">
+                    </a>
+                </div>
+                <div class="col d-flex justify-content-center mt-3">
+                    <a href="#">
+                        <img src="./src/assets/logos/vip-room-logo.png" alt="vip_room-logo">
+                    </a>
+                </div>
+                <div class="col d-flex justify-content-center mt-3">
+                    <a href="#">
+                        <img src="./src/assets/logos/poker-room-logo.png" alt="poker_room-logo">
+                    </a>
+                </div>
+                <div class="col d-flex justify-content-center mt-3">
+                    <a href="#">
+                        <img src="./src/assets/logos/stock-vs-stock.png" alt="poker_room-logo">
+                    </a>
+                </div>
+                <div class="col d-flex justify-content-center mt-3">
+                  <div class="header__date order-lg-1">
+                    <div class="month">
+                        <img src="./src/assets/icons/clock-icon.png" alt="clock-icon">
+                        Mar
+                    </div>
+                    <div class="time order-lg-1">10:27:54</div>
+                  </div>
+                </div>
+                <div class="col d-flex justify-content-center hidden mt-3">
+                    <a href="#">
+                        <img src="./src/assets/logos/stock-vs-stock.png" alt="stock-vs-stock">
+                    </a>
+                </div>
+                <div class="col d-flex justify-content-center hidden mt-3">
+                    <a href="#">
+                        <img src="./src/assets/logos/stock-vs-stock.png" alt="stock-vs-stock">
+                    </a>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <div class="date-time"></div>
+                </div>
+            </div> 
+            
+        </header>
+ 
+                <div class="container">
 
+                        <div class="game-info-container">
+                            <div class="row game-info-container-navigation_panel">
+                                <ul>
+                                    <li>
+                                        <div class="col">
+                                            <a href="#">All</a>
+                                        </div>
+                                    </li>
+                                    <li id="activated-game-info-panel">
+                                        <div class="col">
+                                            <a href="#">Open</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col">
+                                            <a href="#">Live</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="col">
+                                            <a href="#">Finished</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="game-info-containers__wrapper">
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="left-container">
+                                            <div class="left-container__header">
+                                                <a class="icon-link icon-link-hover left-container__back-btn" href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                                      </svg>
+                                                      Back
+                                                </a>
+                                            </div>
+                                            <div class="left-container__date">Dec 15th 15:30PM - Dec 15th 22:00PM</div>
+                                            <div class="left-container__wrapper">
+                                                <div class="left-container_subheader">
+                                                    <left class="left-container__balance">
+                                                        <img src="./src/assets/icons/sword-icon.png" alt="sword-icon">
+                                                        <span class="left-container__balance_text">$10</span>
+                                                    </left>
+                                                    <div class="left-container__icon">
+                                                        <img src="./src/assets/icons/diamonds-icon.png" alt="diamonds-icon">
+                                                    </div>
+                                                </div>
+                                                <div class="left-container__battle-rules">
+                                                    <div class="left-container__battle-rules_title">Battle Rules</div>
+                                                    <div class="left-container__battle-rules_text">
+                                                        Each player has to pick 1 or 3 stocks. The start and end of the Battle depend on the opening hours of the stock exchange. Winner is determined by best performing stock combination.
+                                                    </div>
+                                                </div>
+                
+                                                <div class="left-container__battle-restrictions">
+                                                    <div class="left-container__battle-restrictions_title">Restrictions</div>
+                                                    <div class="left-container__battle-restrictions_text">
+                                                        You can only use a specific stock combination once. Each unique combination can only win one Battle per day.
+                                                    </div>
+                                                </div>
+                
+                                                <div class="profit-tb">
+                                                    <div class="profit-tb__title">Profit table</div>
+                                                    <table class="profit-tb__table">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>Players/<br/>Position</th>
+                                                                <th>1-7</th>
+                                                                <th>8</th>
+                                                                <th class="active-profit">9-11</th>
+                                                                <th>12-20</th>
+                                                                <th>21-30</th>
+                                                                <th>31-50</th>
+                                                            </tr>
+                                                        </thead>
+                
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>1.</td>
+                                                                <td>100.0%</td>
+                                                                <td>60,0%</td>
+                                                                <td>50,0%</td>
+                                                                <td>40,0%</td>
+                                                                <td>36,0%</td>
+                                                                <td>34,0%</td>
+                                                            </tr>
+                
+                                                            <tr>
+                                                                <td>1.</td>
+                                                                <td>-</td>
+                                                                <td>40,0%</td>
+                                                                <td class="active-profit">30.0%</td>
+                                                                <td>27,0%</td>
+                                                                <td>25,0%</td>
+                                                                <td>23,0%</td>
+                                                            </tr>
+                
+                                                            <tr>
+                                                                <td>1.</td>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td class="active-profit">20,0%</td>
+                                                                <td>19,0%</td>
+                                                                <td>17,5%</td>
+                                                                <td>16,5%</td>
+                                                            </tr>
+                
+                                                            <tr>
+                                                                <td>1.</td>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td class="active-profit">-</td>
+                                                                <td>14.0%</td>
+                                                                <td>12.8%</td>
+                                                                <td>11.9%</td>
+                                                            </tr>
+                
+                                                            <tr>
+                                                                <td>1.</td>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td class="active-profit">-</td>
+                                                                <td>-td>
+                                                                <td>8,7%</td>
+                                                                <td>8,0%</td>
+                                                            </tr>
+                
+                                                            <tr>
+                                                                <td>1.</td>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td class="active-profit">-</td>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td>6,6%</td>
+                                                            </tr>
+                
+                                                            <tr>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                                <td>-</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                                <div class="col left-right_container">
+                                                    <div>
+                                                        <div class="left-right_container__no-players">
+                                                            There are no players here yet
+                                                        </div>
+                                                        <div class="left-right_container__no-players_joined">
+                                                            0 players joined
+                                                        </div>
+                                                    </div>
+            
+                                                    <div class="score-points">
+                                                        <div class="score-points__title">Score Points</div>
+                                                        <table class="score-points__table">
+                                                            <thead class="score-points__thead">
+                                                                <tr class="score-points__tr">
+                                                                    <th>
+                                                                        <div class="score-points__table-logo">
+                                                                            <img src="./src/assets/icons/score-points-star-1.png" alt="table-logo">
+                                                                        </div>
+                                                                        <div class="score-points__table-title marshall">Marshall</div>
+                                                                        <div class="score-points__table-balance">1000p</div>
+                                                                    </th>
+                                                                    <th>
+                                                                        <div class="score-points__table-logo">
+                                                                            <img src="./src/assets/icons/score-points-star-2.png" alt="table-logo">
+                                                                        </div>
+                                                                        <div class="score-points__table-title general">General</div>
+                                                                        <div class="score-points__table-balance">500p</div>
+                                                                    </th>
+                                                                    <th>
+                                                                        <div class="score-points__table-logo">
+                                                                            <img src="./src/assets/icons/score-points-star-3.png" alt="table-logo">
+                                                                        </div>
+                                                                        <div class="score-points__table-title major">Major</div>
+                                                                        <div class="score-points__table-balance">250p</div>
+                                                                    </th>
+                                                                    <th>
+                                                                        <div class="score-points__table-logo">
+                                                                            <img src="./src/assets/icons/score-points-star-4.png" alt="table-logo">
+                                                                        </div>
+                                                                        <div class="score-points__table-title sergeant">Sergeant</div>
+                                                                        <div class="score-points__table-balance">100p</div>
+                                                                    </th>
+                                                                    <th>
+                                                                        <div class="score-points__table-logo">
+                                                                            <img src="./src/assets/icons/score-points-star-5.png" alt="table-logo">
+                                                                        </div>
+                                                                        <div class="score-points__table-title corporal">Corporal</div>
+                                                                        <div class="score-points__table-balance">50p</div> 
+                                                                    </th>
+                                                                </tr>
+                                                            </thead>
+            
+                                                            <tbody>
+                                                                <tr class="score-points__tr">
+                                                                    <td class=".score-points__td">
+                                                                        <div class="score-points__table-body_title">1st</div>
+                                                                        <div class="score-points__table-body_text">12p</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="score-points__table-body_title">1st</div>
+                                                                        <div class="score-points__table-body_text">12p</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="score-points__table-body_title">1st</div>
+                                                                        <div class="score-points__table-body_text">12p</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="score-points__table-body_title">1st</div>
+                                                                        <div class="score-points__table-body_text">12p</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="score-points__table-body_title">1st</div>
+                                                                        <div class="score-points__table-body_text">12p</div>
+                                                                    </td>
+                                                                </tr>
+                                                                <tr class="score-points__tr">
+                                                                    <td>
+                                                                        <div class="score-points__table-body_title">1st</div>
+                                                                        <div class="score-points__table-body_text">12p</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="score-points__table-body_title">1st</div>
+                                                                        <div class="score-points__table-body_text">12p</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="score-points__table-body_title">1st</div>
+                                                                        <div class="score-points__table-body_text">12p</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="score-points__table-body_title">1st</div>
+                                                                        <div class="score-points__table-body_text">12p</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="score-points__table-body_title">1st</div>
+                                                                        <div class="score-points__table-body_text">12p</div>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody>
+                                                            <tbody>
+            
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                 
+                                    <div class="right-container-wrapper">
+                                    <div class="right-container">
+                                        
+                                            <div class="right-container__header">
+                                                <div class="open-btn">
+                                                    <button type="button" class="btn btn-primary">Open</button>
+                                                </div>
+                                                <div class="timer"><span class="timer-start">Starts in</span>6h 29m 48s</div>
+                                            </div>
+                                            <div class="right-container__join-battle">
+                                                <div class="right-container__join-battle_title">Join Battle</div>
+                                                <div class="right-container__join-battle_subtitle">Select the stocks and enter Battle</div>
+                                                <div class="right-container__join-battle_search-field">
+                                                    <div class="right-container__join-battle_search-field_icon">
+                                                        <img src="./src/assets/icons/search-icon.png" alt="search-icon">
+                                                    </div>
+                                                    <input type="text" placeholder="search">
+                                                </div>
+                                            </div>
+                                            <div class="dropdown">
+                                                <button type="button" class="dropbtn">Microsoft Corp. MSFT</button>
+                                                    <div class="dropdown-content">
+                                                    <a href="#" class="active">No stock selected</a>
+                                                    <a href="#">No stock selected</a>
+                                                    <!-- <a href="#">Ссылка 3</a> -->
+                                                    </div>
+                                              </div>
+                                              <div class="selected-stocks">
+                                                <div class="selected-stocks__title"><span>0</span> of <span>3</span> selected</div>
+                                                <div class="selected-stocks__subtitle">Treding Stocks</div>
+                                                <div class="selected-stocks__text">Not sure what to pick? These are the most popular selections in the past 24 hours.</div>
+                                              </div>
+                                              <div class="stock-table">
+                                                <div class="item 1-item">
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
+                                                    <div class="stock-table-row__icon">
+                                                        <img src="./src/assets/icons/stock-icon.png" alt="stock-icon">
+                                                    </div>
+                                                </div>
+                                                <div class="item 2-item">
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
+                                                    <div class="stock-table-row__icon">
+                                                        <img src="./src/assets/icons/stock-icon.png" alt="stock-icon">
+                                                    </div>
+                                                </div>
+                                                <div class="item 3-item">
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
+                                                    <div class="stock-table-row__icon">
+                                                        <img src="./src/assets/icons/stock-icon.png" alt="stock-icon">
+                                                    </div>
+                                                </div>
+                                                <div class="item 4-item">
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
+                                                    <div class="stock-table-row__icon">
+                                                        <img src="./src/assets/icons/stock-icon.png" alt="stock-icon">
+                                                    </div>
+                                                </div>
+                                              </div>
+                                              <button type="button" class="selected-stocks__enter-btn">Enter</button>
+                                        
+                                    </div>
+                                </div>
+                               </div>
+                            </div>
+                            </div>
+                        </div>
+                    
+            </div>
+            <div class="sell-bye-wrapper">
+                <div class="left-bg"></div>
+                <div class="right-bg"></div>
+            </div>
+    </div>
+    <div class="container-fluid d-flex justify-content-center footer-wrapper_battle-room__open">
+        <footer class="footer d-flex justify-content-end battle-open__room">
+            <div class="row d-flex justify-content-end">
+                <div class="col footer-wrapper">
+                    <h3 class="footer__title">Regulations & Partners</h3>
+                    <div class="footer__logos">
+                        <img src="./src/assets/logos/footer-logos.png" alt="footer__logos">
+                    </div>
+                    <h3 class="footer__subtitle">© 2024 StockBattle.  All rights reserved.</h3>
+                </div>
+            </div>
+        </footer>
     </div>
     
 </body>
