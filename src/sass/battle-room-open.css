@@ -8,11 +8,38 @@ body {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+  background-color: #000000 !important;
+  font-size: 12px;
 }
 
 .main {
-  background-color: #200927;
+  font-size: 12px;
+  background-image: url("../assets/img/bear_bull-main_bg.png");
   height: 1080px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-attachment: fixed;
+  height: calc(63rem + 7px);
+}
+
+.main::before {
+  content: "";
+  background-image: url("../assets/img/left-side-bg.png");
+  position: absolute;
+  width: 35%;
+  height: 44%;
+  background-repeat: no-repeat;
+  top: 80px;
+}
+
+.main::after {
+  content: "";
+  background-image: url(../assets/img/right-side-bg.png);
+  position: absolute;
+  right: 20px;
+  width: 29%;
+  height: 44%;
+  top: 80px;
 }
 
 .header {
@@ -22,34 +49,24 @@ body {
   z-index: 99;
 }
 
-.header__date {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.date-wrapper {
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: #2A1163;
   width: 160px;
   height: 40px;
+  color: #fff;
   border-radius: 25px;
   border: 1px solid #FFD762;
   position: relative;
   z-index: 99;
-  -webkit-box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
   box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
 }
 
 .header__date > .month {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  align-items: stretch;
   color: #FEFFAB;
   margin-right: 5px;
   border-right: 1px solid #F8D05F;
@@ -79,11 +96,8 @@ img {
   background-color: #200927;
   width: 82%;
   height: 75%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .hidden {
@@ -129,6 +143,10 @@ img {
   float: left;
 }
 
+.sidebars {
+  height: 100rem;
+}
+
 .sidebar__header {
   margin-top: 30px;
 }
@@ -136,27 +154,15 @@ img {
 .header__account-verification {
   margin-top: 20px;
   margin-left: 35px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .header__name-id {
   color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .verify-now {
@@ -177,15 +183,9 @@ img {
 }
 
 .sidebar-avatar-id__wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  align-items: flex-start;
+  justify-content: flex-end;
   font-size: 14px;
   width: 50%;
 }
@@ -203,13 +203,13 @@ img {
   color: #F8D05F;
 }
 
+.sidebar-menu-list {
+  width: 75%;
+}
+
 .sidebar-menu-list .col {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   font-size: 12px;
   color: #F8D05F;
   background-color: #200927;
@@ -236,11 +236,19 @@ img {
   height: 12px;
 }
 
+.btn-primary {
+  background-color: #2151A1 !important;
+  color: #fff !important;
+  border-radius: 6px !important;
+}
+
 .first-col {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+}
+
+.containers-wrapper__first {
+  width: 70%;
 }
 
 .sidebar-menu__balance {
@@ -253,13 +261,8 @@ img {
 }
 
 .sidebar-menu__account-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 .game-info-container {
@@ -294,23 +297,14 @@ img {
   width: 80%;
   min-height: 650px;
   margin-left: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .left-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
+  justify-content: center;
   background-color: rgba(63, 4, 55, 0.9);
-  margin-right: 50px;
-  border: 1px solid #F8D05F;
-  border-radius: 6px;
-  -webkit-box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
-  box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
 }
 
 #activated-game-info-panel > a {
@@ -318,33 +312,57 @@ img {
   text-decoration: underline;
 }
 
-@media (max-width: 1024px) {
+.sidebar-activation {
+  display: inline-block;
+}
+
+@media (max-width: 1025px) {
   .sidebar-activation {
-    visibility: hidden;
+    display: none;
+  }
+  .game-info-container-navigation_panel {
+    justify-content: center;
   }
 }
+@media (min-width: 892px) {
+  .container {
+    max-width: 860px !important;
+  }
+}
+.logo-img {
+  width: 100%;
+}
+
+.header-wrapper > div > a:last-child {
+  width: auto;
+}
+
 .left-container__wrapper {
   margin-top: 15px;
   margin-left: 20px;
-  width: 49%;
   height: 82%;
   border-right: 1px solid #6A3F3A;
+}
+
+.clock-icon {
+  width: 20px;
+  height: 20px;
 }
 
 .left-container__header {
   position: relative;
   z-index: 99;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin: 0 auto;
   width: 95%;
   height: 50px;
-  margin-bottom: 25px;
-  border-bottom: 1px solid #F8D05F;
+  margin-bottom: 45px;
+}
+
+.sidebar {
+  border: 1px solid #F8D05F;
+  border-radius: 6px;
 }
 
 .left-container__header > a {
@@ -357,19 +375,10 @@ img {
 
 .left-container_subheader {
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border-bottom: 1px solid #6A3F3A;
   min-height: 120px;
   gap: 1rem;
@@ -383,15 +392,9 @@ img {
 }
 
 .left-container__balance {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   width: 180px;
   height: 55px;
   border: 1px solid #F8D05F;
@@ -436,7 +439,7 @@ img {
 
 .left-container__battle-rules_text,
 .left-container__battle-restrictions_text {
-  font-size: 14px;
+  font-size: 12px;
   line-height: 18px;
   min-height: 90px;
 }
@@ -483,46 +486,54 @@ tbody :last-child {
 }
 
 .left-right_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   color: #fff;
-  width: 49%;
+  height: 100%;
+  border-radius: 6px;
+  background-color: #3F0437;
+}
+
+.containers-wrapper {
+  display: flex;
+  background-color: #3F0437;
+  border-radius: 6px;
+  padding: 5px;
+  border: 1px solid #F8D05F;
+  border-radius: 6px;
+  box-shadow: -8px 0px 15px -6px rgba(213, 213, 42, 0.72);
+}
+
+.containers-second_main {
+  width: 72%;
+  margin-left: 10rem;
+}
+
+.game-info_panel {
+  width: 100%;
+  margin-left: 15rem;
 }
 
 .left-right_container__no-players {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  padding-left: 15px;
+  padding-right: 15px;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border-radius: 6px;
   background-color: #2E0327;
-  width: 340px;
+  width: 100%;
+  margin-top: 20px;
   height: 120px;
-  border: 1px solid #F8D05F;
   color: #F8D05F;
 }
 
 .left-right_container__no-players_joined {
   color: #FEFFAB;
   margin-top: 30px;
-  -ms-flex-item-align: end;
-      align-self: end;
+  align-self: end;
   float: right;
 }
 
@@ -575,16 +586,16 @@ tbody :last-child {
 }
 
 .footer-wrapper_battle-room__open {
+  position: absolute;
+  display: block;
+  height: 300px;
+  width: 100%;
   background-color: #200927;
 }
 
 .battle-open__room {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .footer__title,
@@ -598,55 +609,33 @@ tbody :last-child {
 }
 
 .footer-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .right-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
   position: relative;
+  justify-content: space-around;
+  width: 30%;
   z-index: 99;
   background-color: rgba(63, 4, 55, 0.9);
   border-radius: 6px;
-  -webkit-box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
   box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
-}
-
-.right-container-wrapper {
-  width: 40%;
 }
 
 .right-container__header {
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: 1px solid #FFD762;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   z-index: 99;
   position: relative;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 90%;
   height: 50px;
@@ -662,17 +651,10 @@ tbody :last-child {
 
 .right-container__join-battle {
   min-height: 200px;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   padding: 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 90%;
 }
 
@@ -690,23 +672,13 @@ tbody :last-child {
   width: 98%;
   padding-right: 110px;
   padding-bottom: 5px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   background-color: #340432;
-  height: 60px;
+  height: 40px;
   border: 1px solid #F8D05F;
   border-radius: 6px;
-}
-
-.right-container-wrapper {
-  width: 40%;
 }
 
 .right-container__join-battle_search-field > input {
@@ -716,19 +688,7 @@ tbody :last-child {
   height: 100%;
 }
 
-.right-container__join-battle_search-field > input::-webkit-input-placeholder {
-  color: #fff;
-}
-
 .right-container__join-battle_search-field > input::-moz-placeholder {
-  color: #fff;
-}
-
-.right-container__join-battle_search-field > input:-ms-input-placeholder {
-  color: #fff;
-}
-
-.right-container__join-battle_search-field > input::-ms-input-placeholder {
   color: #fff;
 }
 
@@ -751,7 +711,7 @@ tbody :last-child {
 }
 
 .dropdown {
-  height: 60px;
+  height: 40px;
   margin: 0 auto;
   color: #fff;
   border-radius: 6px;
@@ -764,7 +724,7 @@ tbody :last-child {
 .dropbtn {
   background-color: #3a0f34;
   color: white;
-  padding: 16px;
+  padding: 6px;
   font-size: 16px;
   border: none;
 }
@@ -780,8 +740,7 @@ tbody :last-child {
   position: absolute;
   background-color: #3A0F34;
   width: 100%;
-  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   z-index: 1;
 }
 
@@ -796,16 +755,15 @@ tbody :last-child {
   display: block;
 }
 
+.headers {
+  height: auto;
+}
+
 .selected-stocks {
   width: 78%;
   margin-top: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   margin-bottom: 50px;
 }
 
@@ -834,16 +792,9 @@ tbody :last-child {
 
 .stock-table {
   white-space: nowrap;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   padding: 10px;
   overflow-x: auto;
   width: 78%;
@@ -867,12 +818,8 @@ tbody :last-child {
   line-height: 20px;
   width: 100%;
   height: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   border-bottom: 1px solid #6A3F3A;
 }
 
@@ -885,4 +832,4 @@ tbody :last-child {
   background-color: #133D1E;
   width: 99%;
   height: 50px;
-}
+}/*# sourceMappingURL=battle-room-open.css.map */

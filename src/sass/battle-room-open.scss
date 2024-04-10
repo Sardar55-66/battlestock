@@ -9,11 +9,38 @@ body {
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
+    background-color: #000000 !important;
+    font-size: 12px;
 }
 
 .main {
-    background-color: #200927;
-    height: 1080px
+    font-size: 12px;
+    background-image: url('../assets/img/bear_bull-main_bg.png');
+    height: 1080px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+    height: calc(63rem + 7px);
+}
+
+.main::before {
+    content: '';
+    background-image: url('../assets/img/left-side-bg.png');
+    position: absolute;
+    width: 35%;
+    height: 44%;
+    background-repeat: no-repeat;
+    top: 80px;
+}
+
+.main::after {
+    content: "";
+    background-image: url(../assets/img/right-side-bg.png);
+    position: absolute;
+    right: 20px;
+    width: 29%;
+    height: 44%;
+    top: 80px;
 }
 
 .header {
@@ -23,13 +50,14 @@ body {
     z-index: 99;
 }
 
-.header__date {
+.date-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #2A1163;
     width: 160px;
     height: 40px;
+    color: #fff;
     border-radius: 25px;
     border: 1px solid #FFD762;
     position: relative;
@@ -118,6 +146,9 @@ img {
     height: 100%;
     float: left;
 }
+.sidebars {
+    height: 100rem;
+}
 
 .sidebar__header {
     margin-top: 30px;
@@ -174,6 +205,9 @@ img {
 .id-number {
     color: #F8D05F;
 }
+.sidebar-menu-list {
+    width: 75%;
+}
 
 .sidebar-menu-list .col {
     display: flex;
@@ -203,12 +237,19 @@ img {
 .sidebar-menu__balance_title {
     height: 12px;
 }
+.btn-primary {
+    background-color: #2151A1 !important;
+    color: #fff !important;
+    border-radius: 6px !important;
+}
 
 .first-col {
     height: 100%;
     display: flex;
 }
-
+.containers-wrapper__first {
+    width: 70%;
+}
 .sidebar-menu__balance {
     color: #40FD3F;
     font-size: 15px;
@@ -263,13 +304,8 @@ img {
 .left-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     background-color: rgba(63, 4, 55, 0.90);
-    margin-right: 50px;
-    border: 1px solid #F8D05F;
-    border-radius: 6px;
-    -webkit-box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
-    -moz-box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
-    box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
     // width: 70%;
 }
 
@@ -279,18 +315,42 @@ img {
     text-decoration: underline;
 }
 
-@media(max-width: 1024px) {
+.sidebar-activation {
+    display: inline-block;
+}
+
+@media(max-width: 1025px) {
     .sidebar-activation {
-        visibility: hidden;
+        display: none;
+    }
+    .game-info-container-navigation_panel {
+        justify-content: center;
     }
 }
+
+@media(min-width: 892px) {
+    .container {
+        max-width: 860px !important;
+    }
+}
+
+.logo-img {
+    width: 100%;
+}
+.header-wrapper>div>a:last-child {
+    width: auto;
+}
+
 
 .left-container__wrapper {
     margin-top: 15px;
     margin-left: 20px;
-    width: 49%;
     height: 82%;
     border-right: 1px solid #6A3F3A;
+}
+.clock-icon {
+    width: 20px;
+    height: 20px;
 }
 
 .left-container__header {
@@ -301,8 +361,11 @@ img {
     margin: 0 auto;
     width: 95%;
     height: 50px;
-    margin-bottom: 25px;
-    border-bottom: 1px solid #F8D05F;
+    margin-bottom: 45px;
+}
+.sidebar {
+    border: 1px solid #F8D05F;
+    border-radius: 6px;
 }
 
 .left-container__header>a {
@@ -379,7 +442,7 @@ img {
 
 .left-container__battle-rules_text,
 .left-container__battle-restrictions_text {
-    font-size: 14px;
+    font-size: 12px;
     line-height: 18px;
     min-height: 90px;
 }
@@ -432,18 +495,43 @@ tbody :last-child {
     justify-content: space-between;
     align-items: center;
     color: #fff;
-    width: 49%;
+    height: 100%;
+    border-radius: 6px;
+    background-color: #3F0437;
+}
+
+.containers-wrapper {
+    display: flex;
+    background-color: #3F0437;
+    border-radius: 6px;
+    padding: 5px;
+    border: 1px solid #F8D05F;
+    border-radius: 6px;
+    -webkit-box-shadow: -8px 0px 15px -6px rgba(213, 213, 42, 0.72);
+    -moz-box-shadow: -8px 0px 15px -6px rgba(213, 213, 42, 0.72);
+    box-shadow: -8px 0px 15px -6px rgba(213, 213, 42, 0.72);
+}
+
+.containers-second_main {
+    width: 72%;
+    margin-left: 10rem;
+}
+.game-info_panel {
+    width: 100%;
+    margin-left: 15rem;
 }
 
 .left-right_container__no-players {
+    padding-left: 15px;
+    padding-right: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 6px;
     background-color: #2E0327;
-    width: 340px;
+    width: 100%;
+    margin-top: 20px;
     height: 120px;
-    border: 1px solid #F8D05F;
     color: #F8D05F;
 }
 
@@ -504,6 +592,10 @@ tbody :last-child {
 }
 
 .footer-wrapper_battle-room__open {
+    position: absolute;
+    display: block;
+    height: 300px;
+    width: 100%;
     background-color: #200927;
 }
 
@@ -534,6 +626,8 @@ tbody :last-child {
     align-items: center;
     flex-direction: column;
     position: relative;
+    justify-content: space-around;
+    width: 30%;
     z-index: 99;
     background-color: rgba(63, 4, 55, 0.90);
     border-radius: 6px;
@@ -542,9 +636,6 @@ tbody :last-child {
     box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
 }
 
-.right-container-wrapper {
-    width: 40%;
-}
 
 .right-container__header {
     padding-top: 20px;
@@ -595,14 +686,11 @@ tbody :last-child {
     justify-content: space-between;
     align-items: center;
     background-color: #340432;
-    height: 60px;
+    height: 40px;
     border: 1px solid #F8D05F;
     border-radius: 6px;
 }
 
-.right-container-wrapper {
-    width: 40%;
-}
 
 .right-container__join-battle_search-field>input {
     width: 75%;
@@ -631,7 +719,7 @@ tbody :last-child {
 }
 
 .dropdown {
-    height: 60px;
+    height: 40px;
     margin: 0 auto;
     color: #fff;
     border-radius: 6px;
@@ -644,7 +732,7 @@ tbody :last-child {
 .dropbtn {
     background-color: #3a0f34;
     color: white;
-    padding: 16px;
+    padding: 6px;
     font-size: 16px;
     border: none;
 }
@@ -671,17 +759,13 @@ tbody :last-child {
     display: block;
 }
 
-// .dropdown-content a:hover {
-//     background-color: #ddd;
-// }
-
 .dropdown:hover .dropdown-content {
     display: block;
 }
+.headers {
+    height: auto;
+}
 
-// .dropdown:hover .dropbtn {
-//  d   background-color: #3e8e41;
-// }
 .selected-stocks {
     width: 78%;
     margin-top: 30px;
