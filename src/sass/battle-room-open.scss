@@ -6,9 +6,6 @@ html {
 }
 
 body {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
     background-color: #000000 !important;
     font-size: 12px;
 }
@@ -16,7 +13,7 @@ body {
 .main {
     font-size: 12px;
     background-image: url('../assets/img/bear_bull-main_bg.png');
-    height: 1080px;
+    height: auto;
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
@@ -42,20 +39,17 @@ body {
     height: 44%;
     top: 80px;
 }
-
-.header {
-    position: absolute;
-    right: 0;
-    width: 83%;
-    z-index: 99;
+.players-count {
+    color: #fff;
 }
 
 .date-wrapper {
     display: flex;
+    margin-bottom: 6px;
     justify-content: center;
     align-items: center;
     background-color: #2A1163;
-    width: 160px;
+    width: 200px;
     height: 40px;
     color: #fff;
     border-radius: 25px;
@@ -67,75 +61,10 @@ body {
     box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
 }
 
-.header__date>.month {
-    display: flex;
-    align-items: stretch;
-    color: #FEFFAB;
-    margin-right: 5px;
-    border-right: 1px solid #F8D05F;
-    padding-right: 5px;
-}
-
-.header__date>.time {
-    color: #F7D261;
-}
-
-.header__date>.month>img {
-    width: 20px;
-    height: 20px;
-}
-
 img {
     position: relative;
     z-index: 99;
     width: 190px;
-}
-
-.sell-bye-wrapper {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../assets/img/bear_bull-bg.png');
-    background-color: #200927;
-    width: 82%;
-    height: 75%;
-    display: flex;
-    justify-content: space-around;
-}
-
-.hidden {
-    visibility: hidden;
-}
-
-.left-bg {
-    position: absolute;
-    left: 0;
-    z-index: 1;
-    background-repeat: no-repeat;
-    height: 50%;
-    width: 43%;
-    background-size: cover;
-    background-image: url('../assets/logos/left-bg.png');
-}
-
-.central-bg {
-    background-repeat: no-repeat;
-    width: 70%;
-    background-size: cover;
-    background-position: top;
-    background-image: url('../assets/img/bear_bull-bg.png');
-}
-
-.right-bg {
-    position: absolute;
-    right: 0;
-    z-index: 1;
-    background-repeat: no-repeat;
-    height: 55%;
-    width: 34%;
-    background-size: cover;
-    background-image: url('../assets/logos/right-bg.png');
-
 }
 
 .sidebar {
@@ -150,6 +79,16 @@ img {
     height: 100rem;
 }
 
+.sidebars-main_wrapper {
+    height: auto;
+    border-bottom: none;
+}
+
+.sidebars-inner_wrapper {
+    position: absolute;
+    height: 130%;
+    border-bottom: none;
+}
 .sidebar__header {
     margin-top: 30px;
 }
@@ -265,14 +204,6 @@ img {
 }
 
 
-.game-info-container {
-    position: absolute;
-    top: 20%;
-    left: 17%;
-    width: 100%;
-}
-
-
 .game-info-container-navigation_panel {
     position: relative;
     z-index: 99;
@@ -293,14 +224,6 @@ img {
     color: #F8D05F;
 }
 
-.game-info-containers__wrapper {
-    z-index: 99;
-    width: 80%;
-    min-height: 650px;
-    margin-left: 20px;
-    display: flex;
-}
-
 .left-container {
     display: flex;
     flex-wrap: wrap;
@@ -309,17 +232,205 @@ img {
     // width: 70%;
 }
 
-
-#activated-game-info-panel>a {
-    color: #fff;
-    text-decoration: underline;
-}
-
 .sidebar-activation {
     display: inline-block;
 }
+.mobile-header {
+    margin-bottom: 15px;
+    width: 100%;
+    min-height: 80px;
+    background-color: #2A1163;
+}
+.mobile-header_inner {
+    margin-top: 15px;
+}
+
+.mobile-header_activation {
+    display: none;
+}
+.month {
+    color: #FEFFAB;
+    border-right: 1px solid #F8D05F;
+    padding-right: 10px; 
+    margin-right: 10px;
+}
+.time {
+    color: #F7D261;
+}
+
+.burger-checkbox {
+    position: absolute;
+    visibility: hidden;
+  }
+  .burger {
+    cursor: pointer;
+    display: block;
+    position: relative;
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 26px;
+    margin: 30px auto;
+  }
+  .burger::before,
+  .burger::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #FFD762;
+  }
+  .burger::before {
+    top: 0;
+    box-shadow: 0 11px 0 #FFD762;
+    transition: box-shadow .3s .15s, top .3s .15s, transform .3s;
+  }
+  .burger::after {
+    bottom: 0;
+    transition: bottom .3s .15s, transform .3s;
+  }
+  .burger-checkbox:checked + .burger::before {
+    top: 11px;
+    transform: rotate(45deg);
+    box-shadow: 0 6px 0 rgba(0,0,0,0);
+    transition: box-shadow .15s, top .3s, transform .3s .15s;
+  }
+  .burger-checkbox:checked + .burger::after {
+    bottom: 11px;
+    transform: rotate(-45deg);
+    transition: bottom .3s, transform .3s .15s;
+  }
+  .game-info-container-navigation_panel {
+    justify-content: start;
+}
+.header-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: end;
+}
+.visible-header__buttons {
+    display: flex;
+}
+
+.hidden-header__buttons {
+    display: none;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    background-color: #22041E;
+    justify-content: center;
+    height: auto;
+    text-align: center;
+    color: #FFD762;
+    font-size: 24px;
+    border-radius: 6px;
+    border: 1px solid #FFD762;
+    -webkit-box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
+    -moz-box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
+    box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
+}
+.hidden-header__buttons:hover {
+    color: #FFD752;
+}
+.hidden-header__buttons>.header-button>img {
+    width: 28px;
+    height: 28px;
+}
+.header-button__text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.header-button_active-status {
+    background-color: #123A1C;
+}
+
+
+.nav-panel_active {
+    color: #fff !important;
+    text-decoration: underline;
+}
+
+.no-players_container-visible {
+    display: flex;
+}
+
+.left-right_container-avatar>img {
+    width: 37px;
+    height: 37px;
+}
+.no-players_container-hidden {
+    display: none;
+}
 
 @media(max-width: 1025px) {
+    .main {
+        height: 100%;
+    }
+    .no-players_container-hidden {
+        display: flex;
+    }
+    .game-info-container-navigation_panel {
+        font-size: 18px;
+    }
+
+    .no-players_wrapper {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        top: 15em;
+    }
+    .left-right_container__no-players_joined {
+        margin-top: 0 !important;
+        align-self: center !important;
+    }
+
+    .no-players_container-visible {
+        display: none !important;
+    }
+
+    .left-container__date {
+        font-size: 18px;
+        width: 90%;
+    }
+
+    .visible-header__buttons {
+        display: none !important;
+    }
+    .hidden-header__buttons {
+        display: flex !important;
+    }
+
+    .containers-wrapper, .containers-wrapper__first {
+        flex-direction: column;
+        width: 100%;
+    }
+   
+    .game-info-container-navigation_panel {
+        justify-content: center;
+    }
+    .header-wrapper {
+        transform: translateY(40px);
+    }
+
+    .date-wrapper {
+        position: absolute !important;
+        top: -36em;
+        width: 100%;
+   }
+   
+
+    .containers-second_main {
+        margin: 0 auto !important;
+    }
+
+    .mobile-header_activation {
+        display: flex;
+    }
     .sidebar-activation {
         display: none;
     }
@@ -328,17 +439,8 @@ img {
     }
 }
 
-@media(min-width: 892px) {
-    .container {
-        max-width: 860px !important;
-    }
-}
-
 .logo-img {
     width: 100%;
-}
-.header-wrapper>div>a:last-child {
-    width: auto;
 }
 
 
@@ -364,8 +466,11 @@ img {
     margin-bottom: 45px;
 }
 .sidebar {
-    border: 1px solid #F8D05F;
-    border-radius: 6px;
+    border-left: 1px solid #F8D05F;
+    border-top: none;
+    border-right: 1px solid #F8D05F;
+    border-bottom: none;
+    background-color: #200927;
 }
 
 .left-container__header>a {
@@ -374,6 +479,18 @@ img {
 
 .left-container__header>a:hover {
     color: #F8D05F;
+}
+.left-container__header-wrapper {
+    display: flex;
+    top: 13em;
+    flex-direction: row;
+    z-index: 99;
+    height: 45px;
+    position: absolute;
+    border-bottom: 1px solid #F8D05F;
+    left: 31em;
+    width: 49%;
+    justify-content: flex-start;
 }
 
 .left-container_subheader {
@@ -514,7 +631,7 @@ tbody :last-child {
 
 .containers-second_main {
     width: 72%;
-    margin-left: 10rem;
+    margin-left: 7rem;
 }
 .game-info_panel {
     width: 100%;
@@ -693,14 +810,10 @@ tbody :last-child {
 
 
 .right-container__join-battle_search-field>input {
-    width: 75%;
+    width: 130px;
     background-color: #340432;
     border: none;
     height: 100%;
-}
-
-.right-container__join-battle_search-field>input::placeholder {
-    color: #fff;
 }
 
 .right-container__join-battle_search-field_icon {
@@ -774,10 +887,6 @@ tbody :last-child {
     margin-bottom: 50px;
 }
 
-.selected-stocks>span {
-    color: #fff;
-}
-
 .selected-stocks__title {
     line-height: 50px;
     color: #FEFFAB;
@@ -809,11 +918,6 @@ tbody :last-child {
     border: 1px solid #F8D05F;
     border-radius: 6px;
     color: #fff;
-}
-
-.stock-table-row>img {
-    width: 30px;
-    height: 20px;
 }
 
 .stock-table-row__icon>img {

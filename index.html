@@ -13,9 +13,29 @@
 
     <div class="container-fluid main p-0">
 
+        <div class=" mobile-header mobile-header_activation w-100">
+            <div class="row mobile-header mobile-header_inner w-100">
+                <div class="col-12 d-flex justify-content-between align-items-center w-100">
+                    <div class="account-info ml-5 d-flex">
+                        <div class="header__avatar">
+                            <img src="./src/assets/logos/avatar-icon.png" alt="avatar-icon">
+                        </div>
+                        <div class="header__name-id">
+                            <span class="name">Davis</span>
+                            <span class="id">ID <span class="id-number">12345678</span></span>
+                        </div>
+                    </div>
+                    <div class="mr-5 d-flex justify-content-center">
+                        <input type="checkbox" id="burger-checkbox" class="burger-checkbox" type="text">
+                        <label class="burger" for="burger-checkbox"></label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div  class="row wrappers">
-            <div class="col-2 sidebars sidebar-activation">
-                <section class="sidebar sidebar-activation">
+            <div class="col-2 sidebars sidebars-main_wrapper sidebar-activation">
+                <section class="sidebar sidebars-inner_wrapper sidebar-activation">
                     <header class="sidebar__header">
                         <div class="sidebar-avatar-id__wrapper">
                             <div class="header__avatar">
@@ -128,28 +148,60 @@
             </div>
             
             <div class="containers-second_main">
-                <div class="row w-100 d-flex justify-content-center mb-5 header-wrapper align-content-end"> 
+                <div class="row w-100 mb-5 header-wrapper"> 
                     <div  class=" col-12 col-sm-12 col-md-12 col-lg-2 headers w-100 d-flex align-items-end justify-content-center">
                         <a href="#">
                             <img class="logo-img" src="./src/assets/logos/stock-battle-logo.png" alt="stock_battle-logo">
                         </a></div>
+                        <div  class=" col-12 col-sm-12 col-md-12 col-lg-2 headers w-100 d-flex align-items-end justify-content-center">
+                            <a class="visible-header__buttons" href="#">
+                                <img class="logo-img"  src="./src/assets/logos/battle-room-logo.png" alt="battle_room-logo">
+                            </a>
+                            <!-- иконка мобильной версии -->
+                            <a class="hidden-header__buttons header-button_active-status" href="#">
+                                <div class="header-button">
+                                    <img class="logo-img" src="./src/assets/icons/sword-icon.png" alt="stock_battle-logo">
+                                    <span class="header-button__text">BATTLE ROOM</span>
+                                </div>
+                            </a>
+                        </div>
                     <div  class=" col-12 col-sm-12 col-md-12 col-lg-2 headers w-100 d-flex align-items-end justify-content-center">
-                        <a href="#">
-                            <img class="logo-img"  src="./src/assets/logos/battle-room-logo.png" alt="battle_room-logo">
-                        </a></div>
-                    <div  class=" col-12 col-sm-12 col-md-12 col-lg-2 headers w-100 d-flex align-items-end justify-content-center">
-                        <a href="#">
+                        <a class="visible-header__buttons href="#">
                             <img class="logo-img" src="./src/assets/logos/vip-room-logo.png" alt="vip_room-logo">
-                        </a></div>
+                        </a>
+                        <!-- иконка мобильной версии -->
+                        <a class="hidden-header__buttons" href="#">
+                            <div class="header-button">
+                                <img class="logo-img" src="./src/assets/icons/crown-icon.png" alt="vip_room-logo">
+                                <span class="header-button__text">VIP ROOM</span>
+                            </div>
+                        </a>
+                    </div>
                     <div  class=" col-12 col-sm-12 col-md-12 col-lg-2 headers w-100 d-flex align-items-end justify-content-center">
-                        <a href="#">
+                        <a class="visible-header__buttons href="#">
                             <img class="logo-img" src="./src/assets/logos/poker-room-logo.png" alt="poker_room-logo">
-                        </a></div>
+                        </a>
+                        <!-- иконка мобильной версии -->
+                        <a class="hidden-header__buttons" href="#">
+                            <div class="header-button">
+                                <img class="logo-img" src="./src/assets/icons/poker-room-icon.png" alt="poker_room-logo">
+                                <span class="header-button__text">POKER ROOM</span>
+                            </div>
+                        </a>
+                    </div>
                     <div  class=" col-12 col-sm-12 col-md-12 col-lg-2 headers w-100 d-flex align-items-end justify-content-center">
-                        <a href="#">
-                            <img class="logo-img" src="./src/assets/logos/stock-vs-stock.png" alt="stock-vs-stock">
-                        </a></div>
-                    <div  class=" col-12 col-sm-12 col-md-12 col-lg-2 headers w-100 header__date d-flex align-items-end justify-content-center">
+                        <a class="visible-header__buttons href="#">
+                            <img class="logo-img" src="./src/assets/logos/stock-vs-stock.png" alt="stock-vs-stock_logo">
+                        </a>
+                        <!-- иконка мобильной версии -->
+                        <a class="hidden-header__buttons" href="#">
+                            <div class="header-button">
+                                <img class="logo-img" src="./src/assets/icons/stock-icon.png" alt="stock-vs-stock_logo">
+                                <span class="header-button__text">STOCK VS STOCK</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div  class=" col-12 col-sm-12 col-md-12 col-lg-2 headers w-100 header__date d-flex align-items-end justify-content-center ordered-item">
                         <div class="date-wrapper">
                             <div class="month">
                                 <img class="clock-icon" src="./src/assets/icons/clock-icon.png" alt="clock-icon">
@@ -163,11 +215,11 @@
             
                 <div class="row w-100 d-flex justify-content-center mt-5 game-info_panel"> 
 
-                    <div class="row game-info-container-navigation_panel justify-content-start">
+                    <div class="row game-info-container-navigation_panel">
                         <ul>
                             <li>
                                 <div class="col col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                                    <a href="#">All</a>
+                                    <a class="nav-panel_active" href="#">All</a>
                                 </div>
                             </li>
                             <li id="activated-game-info-panel">
@@ -188,19 +240,17 @@
                         </ul>
                     </div>
 
-                    
-                    <div class="containers-wrapper containers-wrapper__first">
-                       
-                         <div class="row w-100 mb-3">
-                            <div class="col-12 left-container__header">
-                                <a class="icon-link icon-link-hover left-container__back-btn" href="#">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
-                                        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
-                                      </svg>
-                                      Back
-                                </a>
-                            </div>
+                    <div class="w-100 left-container__header-wrapper">
+                        <div class="col-12 left-container__header">
+                            <a class="icon-link icon-link-hover left-container__back-btn" href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+                                  </svg>
+                                  Back
+                            </a>
                         </div>
+                    </div>
+                    <div class="containers-wrapper containers-wrapper__first">
                        
                         <div class="row w-100">
                             <div  class=" col-12 col-sm-12 col-md-12 col-lg-6 headers w-100 mt-3 mb-5">
@@ -327,12 +377,15 @@
         
                             <div  class=" col-12 col-sm-12 col-md-12 col-lg-6 headers w-100 mt-3 mb-5">
                                 <div class="left-right_container">
-                                    <div>
-                                        <div class="left-right_container__no-players">
+                                    <div class="no-players_wrapper">
+                                        <div class="left-right_container__no-players no-players_container-visible">
                                             There are no players here yet
                                         </div>
+                                        <div class="left-right_container-avatar no-players_container-hidden">
+                                            <img src="./src/assets/logos/avatar-icon.png" alt="">
+                                        </div>
                                         <div class="left-right_container__no-players_joined">
-                                            0 players joined
+                                            <span class="players-count">0</span> players joined
                                         </div>
                                     </div>
         
@@ -437,7 +490,7 @@
                     
                     </div>
                     
-                     <div class="col-12 col-sm-12 col-md-12 col-lg-3 right-container m-2">
+                     <div class="col-12 col-sm-12 col-md-12 col-lg-3 right-container ml-2">
                                         
                                             <div class="right-container__header">
                                                 <div class="open-btn">
@@ -460,12 +513,11 @@
                                                     <div class="dropdown-content">
                                                     <a href="#" class="active">No stock selected</a>
                                                     <a href="#">No stock selected</a>
-                                                    <!-- <a href="#">Ссылка 3</a> -->
                                                      </div>
                                               </div>
                                               <div class="selected-stocks">
                                                 <div class="selected-stocks__title"><span>0</span> of <span>3</span> selected</div>
-                                                <div class="selected-stocks__subtitle">Treding Stocks</div>
+                                                <div class="selected-stocks__subtitle">Trading Stocks</div>
                                                 <div class="selected-stocks__text">Not sure what to pick? These are the most popular selections in the past 24 hours.</div>
                                               </div>
                                               <div class="stock-table">
@@ -518,8 +570,5 @@
         </div>
     </footer>
 </div>
-
-    
-    
 </body>
 </html>
