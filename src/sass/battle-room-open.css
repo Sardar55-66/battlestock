@@ -82,6 +82,10 @@ img {
   height: 100rem;
 }
 
+.wrappers {
+  background-color: linear-gradient(#260021, #0B1432);
+}
+
 .sidebars-main_wrapper {
   height: auto;
   border-bottom: none;
@@ -718,7 +722,7 @@ tbody :last-child {
   display: block;
   height: 300px;
   width: 100%;
-  background-color: #200927;
+  background-color: #0B1432;
 }
 
 .battle-open__room {
