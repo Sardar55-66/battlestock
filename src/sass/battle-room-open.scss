@@ -17,7 +17,7 @@ body {
     background-repeat: no-repeat;
     background-position: top;
     background-attachment: fixed;
-    height: calc(63rem + 7px);
+    height: calc(59rem + 7px);
 }
 
 .main::before {
@@ -71,9 +71,13 @@ img {
     position: relative;
     z-index: 99;
     width: 270px;
-    background-color: #200927;
+    background: linear-gradient(#1D134A, #220821);
     height: 100%;
     float: left;
+    border-left: 1px solid #F8D05F;
+    border-top: none;
+    border-right: 1px solid #F8D05F;
+    border-bottom: none;
 }
 .sidebars {
     height: 100rem;
@@ -86,7 +90,7 @@ img {
 
 .sidebars-inner_wrapper {
     position: absolute;
-    height: 130%;
+    height: 131%;
     border-bottom: none;
 }
 .sidebar__header {
@@ -130,6 +134,7 @@ img {
     justify-content: flex-end;
     font-size: 14px;
     width: 50%;
+    margin-left: 40px;
 }
 
 .header__avatar img {
@@ -187,6 +192,8 @@ img {
     display: flex;
 }
 .containers-wrapper__first {
+    position: relative;
+    z-index: 99;
     width: 70%;
 }
 .sidebar-menu__balance {
@@ -465,13 +472,6 @@ img {
     height: 50px;
     margin-bottom: 45px;
 }
-.sidebar {
-    border-left: 1px solid #F8D05F;
-    border-top: none;
-    border-right: 1px solid #F8D05F;
-    border-bottom: none;
-    background-color: #200927;
-}
 
 .left-container__header>a {
     color: #F8D05F;
@@ -488,7 +488,7 @@ img {
     height: 45px;
     position: absolute;
     border-bottom: 1px solid #F8D05F;
-    left: 31em;
+    left: 34em;
     width: 49%;
     justify-content: flex-start;
 }
@@ -505,7 +505,6 @@ img {
 }
 
 .left-container__date {
-    width: 52%;
     text-align: center;
     margin-top: 30px;
     color: #FEFFAB;
@@ -631,7 +630,7 @@ tbody :last-child {
 
 .containers-second_main {
     width: 72%;
-    margin-left: 7rem;
+    margin-left: 9rem;
 }
 .game-info_panel {
     width: 100%;
@@ -646,10 +645,12 @@ tbody :last-child {
     justify-content: center;
     border-radius: 6px;
     background-color: #2E0327;
-    width: 100%;
-    margin-top: 20px;
+    width: 340px;
+    margin-top: 35px;
     height: 120px;
     color: #F8D05F;
+    border: 1px solid #F8D05F;
+    border-radius: 6px;
 }
 
 .left-right_container__no-players_joined {
@@ -747,6 +748,7 @@ tbody :last-child {
     width: 30%;
     z-index: 99;
     background-color: rgba(63, 4, 55, 0.90);
+    border: 1px solid #F8D05F;
     border-radius: 6px;
     -webkit-box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
     -moz-box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
