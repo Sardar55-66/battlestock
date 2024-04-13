@@ -5,7 +5,18 @@ html {
     overflow-x: hidden;
 }
 
+@font-face { 
+    font-family: "Gordita";
+    src: url("../fonts/GorditaMedium.eot");
+    src: url("../fonts/GorditaMedium.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/GorditaMedium.woff") format("woff"),
+    url("../fonts/GorditaMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
 body {
+    font-family: 'Gordita';
     background-color: linear-gradient(#260021, #0B1432) !important;
     font-size: 12px;
 }
@@ -83,7 +94,8 @@ img {
     height: 100rem;
 }
 .wrappers {
-    background-color: linear-gradient(#260021, #0B1432);
+    background: border-box;
+    background: linear-gradient(#260021, #0B1432);
 }
 
 .sidebars-main_wrapper {
@@ -93,7 +105,7 @@ img {
 
 .sidebars-inner_wrapper {
     position: absolute;
-    height: 131%;
+    height: 121%;
     border-bottom: none;
 }
 .sidebar__header {
@@ -778,16 +790,15 @@ tbody :last-child {
 }
 
 .timer-start {
+    margin-right: 5px;
     color: #F8D05F;
 }
 
 .right-container__join-battle {
     min-height: 200px;
     justify-content: space-evenly;
-    padding: 20px;
     display: flex;
     flex-direction: column;
-    width: 90%;
 }
 
 .right-container__join-battle_title {
@@ -801,8 +812,7 @@ tbody :last-child {
 
 .right-container__join-battle_search-field {
     font-size: 18px;
-    width: 98%;
-    padding-right: 110px;
+    width: 100%;
     padding-bottom: 5px;
     display: flex;
     justify-content: space-between;
@@ -815,20 +825,17 @@ tbody :last-child {
 
 
 .right-container__join-battle_search-field>input {
-    width: 130px;
+    width: 100%;
     background-color: #340432;
     border: none;
-    height: 100%;
+    padding-left: 10px;
 }
 
 .right-container__join-battle_search-field_icon {
-    padding-top: 6px;
     border-right: 1px solid #fff;
     padding-right: 30px;
     margin-left: 10px;
     width: 20px;
-    height: 80%;
-    // width: 20%;
 }
 
 .right-container__join-battle_search-field_icon>img {
@@ -837,14 +844,41 @@ tbody :last-child {
 }
 
 .dropdown {
+    padding-left: 5px;
+    display: flex !important;
+    justify-content: space-between;
     height: 40px;
     margin: 0 auto;
     color: #fff;
     border-radius: 6px;
     border: 1px solid #D14DBF;
     background-color: #3A0F34;
-    width: 80%;
+    width: 100%;
     text-align: center;
+}
+
+.stock-close_btn {
+    background: none;
+    border: none;
+}
+
+.stock-close_btn::before, .stock-close_btn::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    top: 18px;
+    right: 5px;
+    background-color: #FFD762;
+    display: flex;
+    cursor: pointer;
+}
+
+.stock-close_btn::after {
+    transform: rotate(-45deg);
+}
+.stock-close_btn::before {
+    transform: rotate(45deg);
 }
 
 .dropbtn {
@@ -860,32 +894,32 @@ tbody :last-child {
     display: inline-block;
 }
 
-.dropdown-content {
-    color: #fff;
-    display: none;
-    position: absolute;
-    background-color: #3A0F34;
+.selected-stocks_container {
     width: 100%;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
+    height: 100px;
+    margin-top: 10px;
     color: #D445C1;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.selected-stock_line {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    width: 100%;
+    height: 40%;
+    background-color: #22041E;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+
 }
+
 .headers {
     height: auto;
 }
 
 .selected-stocks {
-    width: 78%;
+    width: 90%;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -895,6 +929,7 @@ tbody :last-child {
 .selected-stocks__title {
     line-height: 50px;
     color: #FEFFAB;
+    font-size: 17px;
 }
 
 .selected-stocks__title>span {
@@ -918,7 +953,7 @@ tbody :last-child {
     justify-content: center;
     padding: 10px;
     overflow-x: auto;
-    width: 78%;
+    width: 95%;
     height: 150px;
     border: 1px solid #F8D05F;
     border-radius: 6px;
