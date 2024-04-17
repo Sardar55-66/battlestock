@@ -12,7 +12,6 @@
 <body>
 
     <div class="container-fluid main p-0">
-
         <div class=" mobile-header mobile-header_activation w-100">
             <div class="row mobile-header mobile-header_inner w-100">
                 <div class="col-12 d-flex justify-content-between align-items-center w-100">
@@ -32,7 +31,6 @@
                 </div>
             </div>
         </div>
-
         <div  class="row wrappers">
             <div class="col-2 sidebars sidebars-main_wrapper sidebar-activation">
                 <section class="sidebar sidebars-inner_wrapper sidebar-activation">
@@ -61,6 +59,17 @@
                                 <div class="sidebar-menu__account-info">
                                     <a href="#" class="sidebar-menu__balance_title">Main Balance</a>
                                     <a href="#" class="sidebar-menu__balance">$1000</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row w-75 mb-2 mt-3">
+                            <div class="col first-col">
+                                <div class="sidebar-menu__icon">
+                                    <img class="sidebar-menu__icon" src="./src/assets/icons/score-points.png" alt="bank-icon">
+                                </div>
+                                <div class="sidebar-menu__account-info">
+                                    <a href="#" class="sidebar-menu__balance_title">Score Points</a>
+                                    <a href="#" class="sidebar-menu__balance sidebar-score_points">234572</a>
                                 </div>
                             </div>
                         </div>
@@ -215,7 +224,7 @@
             
                 <div class="row w-100 d-flex justify-content-center mt-5 game-info_panel"> 
 
-                    <div class="row game-info-container-navigation_panel">
+                    <div class="row navbar game-info-container-navigation_panel">
                         <ul>
                             <li>
                                 <div class="col col-sm-12 col-md-6 col-lg-6 col-xl-6">
@@ -253,7 +262,7 @@
                     <div class="containers-wrapper containers-wrapper__first">
                        
                         <div class="row w-100">
-                            <div  class=" col-12 col-sm-12 col-md-12 col-lg-6 headers w-100 mt-3 mb-5">
+                            <div  class=" col-12 col-sm-12 col-md-12 col-lg-6 headers w-100 left-container__container">
                                 <div class="left-container">
                                     
                                     <div class="left-container__date">Dec 15th 15:30PM - Dec 15th 22:00PM</div>
@@ -375,9 +384,9 @@
                         </div>
         
         
-                            <div  class=" col-12 col-sm-12 col-md-12 col-lg-6 headers w-100 mt-3 mb-5">
+                            <div  class=" col-12 col-sm-12 col-md-12 col-lg-6 headers w-100 mt-3">
                                 <div class="left-right_container">
-                                    <div class="no-players_wrapper">
+                                    <div class="col no-players_wrapper">
                                         <div class="left-right_container__no-players no-players_container-visible">
                                             There are no players here yet
                                         </div>
@@ -386,6 +395,42 @@
                                         </div>
                                         <div class="left-right_container__no-players_joined">
                                             <span class="players-count">0</span> players joined
+                                        </div>
+                                    </div>
+
+                                    <div class="row w-100 align-items-center social-media_container mb-5 social-media_active">
+                                        <div class="col d-flex justify-content-around social-media">
+                                            <a href="#">
+                                                <img src="./src/assets/icons/vk.png" alt="vk-logo">
+                                            </a>
+                                            <a href="">
+                                                <img src="./src/assets/icons/x-logo.png" alt="x-logo">
+                                            </a>
+                                            <a href="">
+                                                <img src="./src/assets/icons/facebook.png" alt="FB-logo">
+                                            </a>
+                                            <a href="">
+                                                <img src="./src/assets/icons/whatsapp.png" alt="whatsapp-logo">
+                                            </a>
+                                            <a href="">
+                                                <img src="./src/assets/icons/telegram.png" alt="telegram-logo">
+                                            </a>
+                                            <a href="">
+                                                <img src="./src/assets/icons/viber.png" alt="viber-logo">
+                                            </a>
+                                            <a href="">
+                                                <img src="./src/assets/icons/signal.png" alt="signal-logo">
+                                            </a>
+                                            <div class="social-media_share">
+                                                <span>Share</span>
+                                                <a href="#">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#F8D05F" height="25px" width="25px" version="1.1" id="Capa_1" viewBox="0 0 481.6 481.6" xml:space="preserve">
+                                                        <g>
+                                                            <path d="M381.6,309.4c-27.7,0-52.4,13.2-68.2,33.6l-132.3-73.9c3.1-8.9,4.8-18.5,4.8-28.4c0-10-1.7-19.5-4.9-28.5l132.2-73.8   c15.7,20.5,40.5,33.8,68.3,33.8c47.4,0,86.1-38.6,86.1-86.1S429,0,381.5,0s-86.1,38.6-86.1,86.1c0,10,1.7,19.6,4.9,28.5   l-132.1,73.8c-15.7-20.6-40.5-33.8-68.3-33.8c-47.4,0-86.1,38.6-86.1,86.1s38.7,86.1,86.2,86.1c27.8,0,52.6-13.3,68.4-33.9   l132.2,73.9c-3.2,9-5,18.7-5,28.7c0,47.4,38.6,86.1,86.1,86.1s86.1-38.6,86.1-86.1S429.1,309.4,381.6,309.4z M381.6,27.1   c32.6,0,59.1,26.5,59.1,59.1s-26.5,59.1-59.1,59.1s-59.1-26.5-59.1-59.1S349.1,27.1,381.6,27.1z M100,299.8   c-32.6,0-59.1-26.5-59.1-59.1s26.5-59.1,59.1-59.1s59.1,26.5,59.1,59.1S132.5,299.8,100,299.8z M381.6,454.5   c-32.6,0-59.1-26.5-59.1-59.1c0-32.6,26.5-59.1,59.1-59.1s59.1,26.5,59.1,59.1C440.7,428,414.2,454.5,381.6,454.5z"/>
+                                                        </g>
+                                                        </svg>
+                                                </a>
+                                            </div>
                                         </div>
                                     </div>
         
@@ -494,7 +539,7 @@
                                         
                                             <div class="right-container__header">
                                                 <div class="open-btn">
-                                                    <button type="button" class="btn btn-primary">Open</button>
+                                                    <div class="btn btn-primary">Open</div>
                                                 </div>
                                                 <div class="timer"><span class="timer-start">Starts in</span>6h 29m 48s</div>
                                             </div>
@@ -523,40 +568,73 @@
                                               </div>
                                               <div class="stock-table">
                                                 <div class="item 1-item">
-                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
-                                                    <div class="stock-table-row__icon">
-                                                        <img src="./src/assets/icons/stock-icon.png" alt="stock-icon">
+                                                    <div class="stock-table-row__index">
+                                                        MSFT
                                                     </div>
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
                                                 </div>
                                                 <div class="item 2-item">
-                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
-                                                    <div class="stock-table-row__icon">
-                                                        <img src="./src/assets/icons/stock-icon.png" alt="stock-icon">
+                                                    <div class="stock-table-row__index">
+                                                        MSFT
                                                     </div>
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
                                                 </div>
                                                 <div class="item 3-item">
-                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
-                                                    <div class="stock-table-row__icon">
-                                                        <img src="./src/assets/icons/stock-icon.png" alt="stock-icon">
+                                                    <div class="stock-table-row__index">
+                                                        MSFT
                                                     </div>
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
                                                 </div>
                                                 <div class="item 4-item">
-                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
-                                                    <div class="stock-table-row__icon">
-                                                        <img src="./src/assets/icons/stock-icon.png" alt="stock-icon">
+                                                    <div class="stock-table-row__index">
+                                                        MSFT
                                                     </div>
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
+                                                </div>
+                                                <div class="item 4-item">
+                                                    <div class="stock-table-row__index">
+                                                        MSFT
+                                                    </div>
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
+                                                </div>
+                                                <div class="item 4-item">
+                                                    <div class="stock-table-row__index">
+                                                        MSFT
+                                                    </div>
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
+                                                </div>
+                                                <div class="item 4-item">
+                                                    <div class="stock-table-row__index">
+                                                        MSFT
+                                                    </div>
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
+                                                </div>
+                                                <div class="item 4-item">
+                                                    <div class="stock-table-row__index">
+                                                        MSFT
+                                                    </div>
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
+                                                </div>
+                                                <div class="item 4-item">
+                                                    <div class="stock-table-row__index">
+                                                        MSFT
+                                                    </div>
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
+                                                </div>
+                                                <div class="item 4-item">
+                                                    <div class="stock-table-row__index">
+                                                        MSFT
+                                                    </div>
+                                                    <div class="stock-table-row__text">Microsoft Corp.    MSFT</div>
                                                 </div>
                                               </div>
                                               <button type="button" class="selected-stocks__enter-btn">Enter</button>
                                         
                                     </div>
                                 </div>
-                                </div>
-       
-                    </div>
-                
-            
             </div>
+       </div>
+    </div>
 
 <div class="container-fluid d-flex justify-content-center footer-wrapper_battle-room__open">
     <footer class="footer d-flex justify-content-end battle-open__room">

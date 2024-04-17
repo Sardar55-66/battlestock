@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   width: 100%;
   max-width: 100%;
@@ -51,6 +52,35 @@ body {
   color: #fff;
 }
 
+.social-media_container {
+  width: 100%;
+  height: auto;
+  border-radius: 25px;
+  background-color: #22041E;
+  border: 1px solid #6A3F3A;
+}
+
+.social-media_container::before {
+  content: "›";
+  cursor: pointer;
+  font-size: 30px;
+  color: #FFD762;
+  bottom: 5px;
+  left: 10px;
+  position: relative;
+}
+
+.social-media > a > img {
+  width: 28px;
+  height: 28px;
+}
+
+.social-media_share > span {
+  font-size: 13px;
+  margin-left: 5px;
+  color: #F8D05F;
+}
+
 .date-wrapper {
   display: flex;
   margin-bottom: 6px;
@@ -77,7 +107,7 @@ img {
   position: relative;
   z-index: 99;
   width: 270px;
-  background: linear-gradient(#1D134A, #220821);
+  background: linear-gradient(#220821, #1D134A);
   height: 100%;
   float: left;
   border-left: 1px solid #F8D05F;
@@ -102,12 +132,17 @@ img {
 
 .sidebars-inner_wrapper {
   position: absolute;
-  height: 121%;
+  height: 126%;
   border-bottom: none;
 }
 
 .sidebar__header {
   margin-top: 30px;
+}
+
+.left-container__container {
+  margin-bottom: 15px;
+  margin-top: 25px;
 }
 
 .header__account-verification {
@@ -135,6 +170,11 @@ img {
 
 .sidebar-menu__balance_title {
   color: #fff;
+}
+
+.sidebar-score_points::before {
+  content: "✪";
+  margin-right: 5px;
 }
 
 .sidebar-menu__balance_title:hover {
@@ -209,7 +249,7 @@ img {
 
 .containers-wrapper__first {
   position: relative;
-  z-index: 99;
+  z-index: 98;
   width: 70%;
 }
 
@@ -228,6 +268,7 @@ img {
 }
 
 .game-info-container-navigation_panel {
+  font-size: 14px;
   position: relative;
   z-index: 99;
   width: 100%;
@@ -347,6 +388,10 @@ img {
   align-content: end;
 }
 
+.header-wrapper:first-child {
+  margin-top: 20px;
+}
+
 .visible-header__buttons {
   display: flex;
 }
@@ -404,7 +449,14 @@ img {
   display: none;
 }
 
+.social-media_active {
+  display: flex;
+}
+
 @media (max-width: 1025px) {
+  .social-media_active {
+    display: none;
+  }
   .main {
     height: 100%;
   }
@@ -415,6 +467,7 @@ img {
     font-size: 18px;
   }
   .no-players_wrapper {
+    width: 100%;
     display: flex;
     align-items: center;
     position: absolute;
@@ -502,7 +555,7 @@ img {
 
 .left-container__header-wrapper {
   display: flex;
-  top: 13em;
+  top: calc(17px + 10rem);
   flex-direction: row;
   z-index: 99;
   height: 45px;
@@ -515,6 +568,7 @@ img {
 
 .left-container_subheader {
   margin: 0 auto;
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -583,10 +637,14 @@ img {
   min-height: 90px;
 }
 
+.left-container__battle-restrictions_text {
+  margin-bottom: 40px;
+}
+
 .profit-tb {
   color: #fff;
   font-size: 12px;
-  margin-bottom: 20px;
+  margin-top: 55px;
 }
 
 .profit-tb__title {
@@ -729,7 +787,7 @@ tbody :last-child {
 .footer-wrapper_battle-room__open {
   position: absolute;
   display: block;
-  height: 300px;
+  padding-top: 90px;
   width: 100%;
   background-color: #0B1432;
 }
@@ -781,6 +839,10 @@ tbody :last-child {
   display: flex;
   width: 90%;
   height: 50px;
+}
+
+.open-btn > div {
+  padding: 5px;
 }
 
 .timer {
@@ -920,7 +982,7 @@ tbody :last-child {
   margin-top: 30px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .selected-stocks__title {
@@ -955,11 +1017,35 @@ tbody :last-child {
   border: 1px solid #F8D05F;
   border-radius: 6px;
   color: #fff;
+  overflow-y: scroll;
 }
 
-.stock-table-row__icon > img {
+.stock-table > div {
+  margin-bottom: 10px;
+}
+
+.stock-table::-webkit-scrollbar {
+  background-color: #260423;
+  margin-right: 5px;
+}
+
+.stock-table::-webkit-scrollbar-thumb:vertical {
+  position: relative;
+  background-color: #8D4987;
+  width: 2px;
+  margin-right: 5px;
+  border-radius: 6px;
+  height: 50%;
+}
+
+.stock-table-row__index {
   width: 30px;
   height: 20px;
+  background-color: #FEFFAB;
+  color: black;
+  width: 50px;
+  height: 18px;
+  text-align: center;
 }
 
 .item {
