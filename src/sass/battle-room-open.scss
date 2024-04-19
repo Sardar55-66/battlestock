@@ -15,16 +15,27 @@ html {
     font-weight: 500;
 }
 
+@font-face { 
+    font-family: "Sawarabi";
+    src: url("../fonts/SawarabiMincho-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 500;
+}
+
 body {
     font-family: 'Gordita';
     background-color: linear-gradient(#260021, #0B1432) !important;
     font-size: 12px;
 
 }
+.first-wrapper {
+    background: linear-gradient(#260021, #0B1432);
+    background-repeat: no-repeat;
+}
 
 .main {
-    font-size: 12px;
     background-image: url('../assets/img/bear_bull-main_bg.png');
+    font-size: 12px;
     height: auto;
     background-repeat: no-repeat;
     background-position: top;
@@ -55,23 +66,44 @@ body {
     color: #fff;
 }
 
-.social-media_container {
+.social-logos_wrapper {
+    display: flex;
     width: 100%;
+}
+
+.left-right_container-avatar  {
+    margin-right: 10px;
+}
+
+.social-media_container {
+    position: absolute;
+    right: 0;
+    bottom: 25%;
+    margin-right: 18px;
+    z-index: 99;
+    width: 88%;
+    padding-left: 30px;
     height: auto;
     border-radius: 25px;
     background-color: #22041E;
     border: 1px solid #6A3F3A;
 }
 
-.social-media_container::before {
-    content: '\203A';
-    cursor: pointer;
-    font-size: 30px;
-    color: #FFD762;
-    bottom: 5px;
-    left: 10px;
-    position: relative;
+.social-close_btn {
+    height: 100%;
+    background: none;
+    border: none;
 }
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.decrease {
+    width: 40% !important;
+}
+
+
 .social-media>a>img {
     width: 28px;
     height: 28px;
@@ -82,14 +114,32 @@ body {
     color: #F8D05F;
 }
 
+.social-media_share {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        min-width: 75px;
+}
+
+.social-media {
+    height: 35px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .date-wrapper {
+    margin-bottom: 11px;
+    margin-top: 10px;
+    width: 100%;
     display: flex;
     margin-bottom: 6px;
     justify-content: center;
     align-items: center;
     background-color: #2A1163;
-    width: 200px;
-    height: 40px;
+    min-width: 150px;
+    height: 30px;
     color: #fff;
     border-radius: 25px;
     border: 1px solid #FFD762;
@@ -123,7 +173,6 @@ img {
 }
 .wrappers {
     background: border-box;
-    background: linear-gradient(#260021, #0B1432);
 }
 
 .sidebars-main_wrapper {
@@ -133,7 +182,7 @@ img {
 
 .sidebars-inner_wrapper {
     position: absolute;
-    height: 126%;
+    height: 125%;
     border-bottom: none;
 }
 .sidebar__header {
@@ -161,6 +210,12 @@ img {
 .verify-now {
     float: left;
     color: #fff;
+    margin-left: 20px;
+}
+
+.verification-wrapper {
+    display: flex;
+    align-items: center;
 }
 
 .verify-now:hover {
@@ -168,7 +223,7 @@ img {
 }
 
 .sidebar-menu__balance_title {
-    color: #fff;
+    color: #f8d05f;
 }
 .sidebar-score_points::before {
     content: '\272A';
@@ -201,7 +256,7 @@ img {
     color: #F8D05F;
 }
 .sidebar-menu-list {
-    width: 75%;
+    width: 82%;
 }
 
 .sidebar-menu-list .col {
@@ -216,6 +271,8 @@ img {
 }
 
 .sidebar-menu__btn_title {
+    margin-left: 10px;
+    font-size: 14px;
     color: #F8D05F;
 }
 
@@ -230,6 +287,7 @@ img {
 }
 
 .sidebar-menu__balance_title {
+    margin-left: 10px;
     height: 12px;
 }
 .btn-primary {
@@ -246,8 +304,16 @@ img {
     position: relative;
     z-index: 98;
     width: 70%;
+    margin-left: 20px !important;
+}
+
+.score-points__title {
+    font-size: 14px;
+    color: #F8D05F;
+    margin-bottom: 10px;
 }
 .sidebar-menu__balance {
+    margin-left: 10px;
     color: #40FD3F;
     font-size: 15px;
 }
@@ -298,7 +364,7 @@ img {
     margin-bottom: 15px;
     width: 100%;
     min-height: 80px;
-    background-color: #2A1163;
+    background: linear-gradient(#22041E, #1D134A);
 }
 .mobile-header_inner {
     margin-top: 15px;
@@ -371,8 +437,19 @@ img {
     justify-content: center;
     align-content: end;
 }
+
+.verification-icon {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
 .header-wrapper:first-child {
     margin-top: 20px;
+}
+.icon-active {
+    transition-duration: 0.6s;
+    transition-property: all;
+    display: none;
 }
 .visible-header__buttons {
     display: flex;
@@ -406,6 +483,8 @@ img {
     margin-top: 10px;
     margin-bottom: 10px;
     display: inline-block;
+    font-family: 'Sawarabi';
+    font-size: 14px;
 }
 .header-button_active-status {
     background-color: #123A1C;
@@ -432,7 +511,38 @@ img {
     display: flex;
 }
 
+.no-players_wrapper {
+    width: 90%;
+}
+
+.account-info {
+    margin-left: 10px;
+}
+
+
 @media(max-width: 1025px) {
+
+    .social-logos_wrapper {
+        position: relative;
+        top: 20em;
+    }
+
+    .score-points {
+        left: 10px;
+        position: relative;
+        bottom: 15em;
+    }
+
+    .right-container {
+        margin-top: 3rem;
+        margin-left: 0 !important;
+        left: 18px;
+    }
+
+    .social-media {
+        display: flex;
+        align-items: center;
+    }
 
     .social-media_active {
         display: none;
@@ -448,13 +558,14 @@ img {
     }
 
     .no-players_wrapper {
-        width: 100%;
+        width: 90%;
         display: flex;
         align-items: center;
         position: absolute;
         top: 15em;
     }
     .left-right_container__no-players_joined {
+        width: 100%;
         margin-top: 0 !important;
         align-self: center !important;
     }
@@ -486,12 +597,6 @@ img {
     .header-wrapper {
         transform: translateY(40px);
     }
-
-    .date-wrapper {
-        position: absolute !important;
-        top: -36em;
-        width: 100%;
-   }
    
 
     .containers-second_main {
@@ -507,7 +612,59 @@ img {
     .game-info-container-navigation_panel {
         justify-content: center;
     }
+
+    .date-wrapper {
+        width: 100%;
+        position: absolute;
+        bottom: 31em;
+    }
+
+    .logo-img_main-logo {
+        margin-bottom: 30px;
+    }
 }
+
+@media(max-width: 450px) {
+
+    .game-info-container-navigation_panel {
+        font-size: 14px;
+        width: 120%;
+    }
+
+    
+    .burger-container {
+        margin-right: 10px;
+        width: 27px;
+    }
+
+    .mobile-header {
+        position: relative;
+        z-index: 99;
+        justify-content: space-around;
+    }
+
+    .social-close_btn>svg {
+        width: 20px;
+        height: 20px;
+    }
+    .social-media_container {
+        width: 100%;
+        position: absolute;
+        right: 0;
+        margin-right: 0;
+        bottom: -70%;
+    }
+
+    .social-media_page>img {
+        width: 20px !important;
+        height: 20px !important;
+    }
+    .no-players_joined-wrapper {
+        position: absolute;
+        left: 0;
+    }
+}
+
 
 .logo-img {
     width: 100%;
@@ -523,6 +680,8 @@ img {
 .clock-icon {
     width: 20px;
     height: 20px;
+    margin-bottom: 5px;
+    margin-right: 3px;
 }
 
 .left-container__header {
@@ -532,7 +691,7 @@ img {
     align-items: center;
     margin: 0 auto;
     width: 95%;
-    height: 50px;
+    height: 25px;
     margin-bottom: 45px;
 }
 
@@ -544,15 +703,15 @@ img {
     color: #F8D05F;
 }
 .left-container__header-wrapper {
+    margin-left: 5px;
     display: flex;
     top: calc(17px + 10rem);
     flex-direction: row;
     z-index: 99;
-    height: 45px;
-    position: absolute;
+    height: 31px;
     border-bottom: 1px solid #F8D05F;
     left: 34em;
-    width: 49%;
+    width: 97%;
     justify-content: flex-start;
 }
 
@@ -588,7 +747,8 @@ img {
 .left-container__balance_text {
     display: inline-block;
     margin-left: 10px;
-    font-size: 25px;
+    font-family: 'Sawarabi';
+    font-size: 26px;
 }
 
 .left-container__balance>img {
@@ -690,9 +850,9 @@ tbody :last-child {
     padding: 5px;
     border: 1px solid #F8D05F;
     border-radius: 6px;
-    -webkit-box-shadow: -8px 0px 15px -6px rgba(213, 213, 42, 0.72);
-    -moz-box-shadow: -8px 0px 15px -6px rgba(213, 213, 42, 0.72);
-    box-shadow: -8px 0px 15px -6px rgba(213, 213, 42, 0.72);
+    -webkit-box-shadow: -9px -2px 33px -4px rgba(213, 213, 42, 0.72);
+    -moz-box-shadow: -9px -2px 33px -4px rgba(213, 213, 42, 0.72);
+    box-shadow: -9px -2px 33px -4px rgba(213, 213, 42, 0.72);
 }
 
 .containers-second_main {
@@ -712,7 +872,7 @@ tbody :last-child {
     justify-content: center;
     border-radius: 6px;
     background-color: #2E0327;
-    width: 340px;
+    width: 100%;
     margin-top: 35px;
     height: 120px;
     color: #F8D05F;
@@ -740,6 +900,7 @@ tbody :last-child {
 }
 
 .score-points {
+    margin-right: 20px;
     width: 100%;
 }
 
@@ -747,7 +908,7 @@ tbody :last-child {
     margin-bottom: 20px;
     text-align: center;
     border: 1px solid #F8D05F;
-    width: 95%;
+    width: 100%;
 }
 
 
@@ -780,13 +941,14 @@ tbody :last-child {
     position: absolute;
     display: block;
     padding-top: 90px;
-    width: 100%;
+    width: 90%;
     background-color: #0B1432;
 }
 
 .battle-open__room {
     display: flex;
     justify-content: center;
+    margin-top: 3em;
 }
 
 .footer__title,
@@ -807,6 +969,7 @@ tbody :last-child {
 }
 
 .right-container {
+    margin-left: 2em;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -841,6 +1004,7 @@ tbody :last-child {
 }
 
 .timer {
+    margin-bottom: 5px;
     color: #fff;
 }
 
@@ -850,6 +1014,7 @@ tbody :last-child {
 }
 
 .right-container__join-battle {
+    width: 100%;
     min-height: 200px;
     justify-content: space-evenly;
     display: flex;
@@ -866,6 +1031,7 @@ tbody :last-child {
 }
 
 .right-container__join-battle_search-field {
+    margin-bottom: 25px;
     font-size: 18px;
     width: 100%;
     padding-bottom: 5px;
@@ -968,13 +1134,17 @@ tbody :last-child {
     border-radius: 6px;
 
 }
+.hidden-header__buttons {
+    height: 40px;
+    align-items: center;
+}
 
 .headers {
     height: auto;
 }
 
 .selected-stocks {
-    width: 90%;
+    width: 100%;
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -1008,37 +1178,51 @@ tbody :last-child {
     justify-content: center;
     padding: 10px;
     overflow-x: auto;
-    width: 95%;
+    width: 100%;
     height: 150px;
     border: 1px solid #F8D05F;
     border-radius: 6px;
     color: #fff;
     overflow-y: scroll;
 }
+
 .stock-table>div {
     margin-bottom: 10px;
+    scroll-margin-right: 5px;
 }
 .stock-table::-webkit-scrollbar {
     background-color: #260423;
-    margin-right: 5px;
+    width: 10px;
+    scroll-margin-top: 19px;
 }
-.stock-table::-webkit-scrollbar-thumb:vertical {
+.stock-table::-webkit-scrollbar-thumb {
     position: relative;
     background-color: #8D4987;
     width: 2px;
-    margin-right: 5px;
     border-radius: 6px;
-    height: 50%;
+    scroll-margin-right: 5px;
 }
 
 .stock-table-row__index {
     width: 30px;
     height: 20px;
-    background-color: #FEFFAB;
+    background-color: #ffd600;
     color: black;
     width: 50px;
     height: 18px;
     text-align: center;
+}
+
+.stock-table-row__index::after {
+    content: '-';
+    color: #fff;
+    position: relative;
+    left: 14px;
+}
+
+.stock-table-row__text {
+    font-size: 14px;
+    margin-left: 15px;
 }
 
 .item {
@@ -1046,7 +1230,7 @@ tbody :last-child {
     width: 100%;
     height: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     border-bottom: 1px solid #6A3F3A;
 }
 
