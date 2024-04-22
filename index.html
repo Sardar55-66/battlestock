@@ -13,7 +13,7 @@
 
     <div class="first-wrapper">
         <div class="container-fluid main p-0">
-            <div class=" mobile-header mobile-header_activation w-100">
+            <div class="mobile-header_activation w-100">
                 <div class="row mobile-header mobile-header_inner w-100">
                     <div class="col-12 d-flex justify-content-between align-items-center w-100">
                         <div class="account-info d-flex">
@@ -164,8 +164,9 @@
                     <div class="row w-100 mb-5 header-wrapper"> 
                         <div  class=" col-12 col-sm-12 col-md-12 col-lg-2 headers mobile-header_icon w-100 d-flex align-items-end justify-content-center">
                             <a href="#">
-                                <img class="logo-img logo-img_main-logo" src="./src/assets/logos/stock-battle-logo.png" alt="stock_battle-logo">
-                            </a></div>
+                                <img class="logo-img logo-img_main-logo" src="./src/assets/logos/stock-battle-logo.svg" alt="stock_battle-logo">
+                            </a>
+                        </div>
                             <div  class=" col-12 col-sm-12 col-md-12 col-lg-2 headers w-100 d-flex align-items-end justify-content-center">
                                 <a class="visible-header__buttons" href="#">
                                     <img class="logo-img"  src="./src/assets/logos/battle-room-logo.png" alt="battle_room-logo">
@@ -173,7 +174,7 @@
                                 <!-- иконка мобильной версии -->
                                 <a class="hidden-header__buttons header-button_active-status" href="#">
                                     <div class="header-button">
-                                        <img class="logo-img" src="./src/assets/icons/sword-icon.png" alt="stock_battle-logo">
+                                        <img class="logo-img" src="./src/assets/icons/sword-icon.svg" alt="stock_battle-logo">
                                         <span class="header-button__text">BATTLE ROOM</span>
                                     </div>
                                 </a>
@@ -185,7 +186,7 @@
                             <!-- иконка мобильной версии -->
                             <a class="hidden-header__buttons" href="#">
                                 <div class="header-button">
-                                    <img class="logo-img" src="./src/assets/icons/crown-icon.png" alt="vip_room-logo">
+                                    <img class="logo-img" src="./src/assets/icons/crown-icon.svg" alt="vip_room-logo">
                                     <span class="header-button__text">VIP ROOM</span>
                                 </div>
                             </a>
@@ -197,7 +198,7 @@
                             <!-- иконка мобильной версии -->
                             <a class="hidden-header__buttons" href="#">
                                 <div class="header-button">
-                                    <img class="logo-img" src="./src/assets/icons/poker-room-icon.png" alt="poker_room-logo">
+                                    <img class="logo-img" src="./src/assets/icons/poker-room-icon.svg" alt="poker_room-logo">
                                     <span class="header-button__text">POKER ROOM</span>
                                 </div>
                             </a>
@@ -209,7 +210,7 @@
                             <!-- иконка мобильной версии -->
                             <a class="hidden-header__buttons" href="#">
                                 <div class="header-button">
-                                    <img class="logo-img" src="./src/assets/icons/candles.png" alt="stock-vs-stock_logo">
+                                    <img class="logo-img" src="./src/assets/icons/candles-icon.svg" alt="stock-vs-stock_logo">
                                     <span class="header-button__text">STOCK VS STOCK</span>
                                 </div>
                             </a>
@@ -266,7 +267,7 @@
                             </div>
                         </div>
                            
-                            <div class="row w-100">
+                            <div class="row w-100 elapsed">
                                 <div  class=" col-12 col-sm-12 col-md-12 col-lg-6 headers w-100 left-container__container">
                                     <div class="left-container">
                                         
@@ -274,7 +275,7 @@
                                         <div class="left-container__wrapper">
                                             <div class="left-container_subheader">
                                                 <left class="left-container__balance">
-                                                    <img src="./src/assets/icons/sword-icon.png" alt="sword-icon">
+                                                    <img src="./src/assets/icons/sword-icon.svg" alt="sword-icon">
                                                     <span class="left-container__balance_text">$10</span>
                                                 </left>
                                                 <div class="left-container__icon">
@@ -390,7 +391,7 @@
             
             
                                 <div  class=" col-12 col-sm-12 col-md-12 col-lg-6 headers w-100 mt-3">
-                                    <div class="left-right_container mb-5">
+                                    <div class="left-right_container">
                                         <div class="row no-players_wrapper">
                                             <div class="col-xs-6 col-md-6 col-sm-12 col-xl-12 col-lg-12  left-right_container__no-players no-players_container-visible">
                                                 There are no players here yet
@@ -407,12 +408,6 @@
                                                     <span class="players-count">0</span> players joined
                                                 </div>
                                             </div>
-                                            
-                                            
-                                        
-                                        </div>
-            
-                                        <div class="score-points">
                                             <div class="social-media_container order-1">
                                                 <div class="row social-media">
                                                     <button class="social-close_btn" type="button">
@@ -453,6 +448,12 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            
+                                        
+                                        </div>
+            
+                                        <div class="score-points">
+                                          
                                             <div class="score-points__title">Score Points</div>
                                             <table class="score-points__table">
                                                 <thead class="score-points__thead">
@@ -648,25 +649,26 @@
                                                   </div>
                                                   <button type="button" class="selected-stocks__enter-btn">Enter</button>
                                             
-                                        </div>
+                        </div>
                                     </div>
+                                    
                 </div>
            </div>
         </div>
     
-    <div class="container-fluid d-flex justify-content-center footer-wrapper_battle-room__open">
-        <footer class="footer d-flex justify-content-end battle-open__room">
-            <div class="row d-flex justify-content-end">
-                <div class="col footer-wrapper">
-                    <h3 class="footer__title">Regulations & Partners</h3>
-                    <div class="footer__logos">
-                        <img src="./src/assets/logos/footer-logos.png" alt="footer__logos">
+        <div class="container-fluid d-flex justify-content-center footer-wrapper_battle-room__open">
+            <footer class="footer d-flex justify-content-end battle-open__room">
+                <div class="row d-flex justify-content-end">
+                    <div class="col footer-wrapper">
+                        <h3 class="footer__title">Regulations & Partners</h3>
+                        <div class="footer__logos">
+                            <img src="./src/assets/logos/footer-logos.png" alt="footer__logos">
+                        </div>
+                        <h3 class="footer__subtitle">© 2024 StockBattle.  All rights reserved.</h3>
                     </div>
-                    <h3 class="footer__subtitle">© 2024 StockBattle.  All rights reserved.</h3>
                 </div>
-            </div>
-        </footer>
-    </div>
+            </footer>
+        </div>
     </div>
     <script src="./src/js/script.js"></script>
 </body>

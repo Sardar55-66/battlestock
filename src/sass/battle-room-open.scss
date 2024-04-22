@@ -26,7 +26,7 @@ body {
     font-family: 'Gordita';
     background-color: linear-gradient(#260021, #0B1432) !important;
     font-size: 12px;
-
+    min-width: 305px;
 }
 .first-wrapper {
     background: linear-gradient(#260021, #0B1432);
@@ -39,7 +39,6 @@ body {
     height: auto;
     background-repeat: no-repeat;
     background-position: top;
-    background-attachment: fixed;
     height: calc(59rem + 7px);
 }
 
@@ -100,7 +99,7 @@ body {
 }
 
 .decrease {
-    width: 40% !important;
+    width: 35% !important;
 }
 
 
@@ -123,7 +122,7 @@ body {
 
 .social-media {
     height: 35px;
-    width: 100%;
+    width: 120%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -173,6 +172,7 @@ img {
 }
 .wrappers {
     background: border-box;
+    flex-wrap: nowrap;
 }
 
 .sidebars-main_wrapper {
@@ -182,7 +182,7 @@ img {
 
 .sidebars-inner_wrapper {
     position: absolute;
-    height: 125%;
+    height: 131%;
     border-bottom: none;
 }
 .sidebar__header {
@@ -363,8 +363,9 @@ img {
 .mobile-header {
     margin-bottom: 15px;
     width: 100%;
-    min-height: 80px;
+    min-height: 73px;
     background: linear-gradient(#22041E, #1D134A);
+    border-bottom: 1px solid #FFD762;
 }
 .mobile-header_inner {
     margin-top: 15px;
@@ -600,6 +601,7 @@ img {
    
 
     .containers-second_main {
+        width: 100%;
         margin: 0 auto !important;
     }
 
@@ -631,6 +633,11 @@ img {
         width: 120%;
     }
 
+    .game-info-container-navigation_panel>ul>li {
+        width: 35px;
+        margin-right: 3px;
+    }
+
     
     .burger-container {
         margin-right: 10px;
@@ -648,16 +655,15 @@ img {
         height: 20px;
     }
     .social-media_container {
-        width: 100%;
         position: absolute;
         right: 0;
         margin-right: 0;
-        bottom: -70%;
+        bottom: 10%;
     }
 
     .social-media_page>img {
-        width: 20px !important;
-        height: 20px !important;
+        width: 15px !important;
+        height: 15px !important;
     }
     .no-players_joined-wrapper {
         position: absolute;
@@ -729,7 +735,7 @@ img {
 
 .left-container__date {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 20px;
     color: #FEFFAB;
 }
 
@@ -763,6 +769,7 @@ img {
 
 .left-container__battle-rules,
 .left-container__battle-restrictions {
+    margin-top: 20px;
     border-bottom: 1px solid #6A3F3A;
     padding-top: 10px;
     color: #fff;
@@ -793,7 +800,7 @@ img {
 .profit-tb {
     color: #fff;
     font-size: 12px;
-    margin-top: 55px;
+    margin-top: 20px;
 }
 
 .profit-tb__title {
@@ -832,7 +839,12 @@ tbody :last-child {
     border: none;
 }
 
+.elapsed {
+    max-width: 100%;
+}
+
 .left-right_container {
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -943,6 +955,7 @@ tbody :last-child {
     padding-top: 90px;
     width: 90%;
     background-color: #0B1432;
+    min-width: 305px;
 }
 
 .battle-open__room {
@@ -1014,8 +1027,10 @@ tbody :last-child {
 }
 
 .right-container__join-battle {
+    margin-top: 20px;
+    line-height: 25px;
     width: 100%;
-    min-height: 200px;
+    min-height: 46px;
     justify-content: space-evenly;
     display: flex;
     flex-direction: column;
@@ -1031,6 +1046,7 @@ tbody :last-child {
 }
 
 .right-container__join-battle_search-field {
+    margin-top: 20px;
     margin-bottom: 25px;
     font-size: 18px;
     width: 100%;
@@ -1145,7 +1161,7 @@ tbody :last-child {
 
 .selected-stocks {
     width: 100%;
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
