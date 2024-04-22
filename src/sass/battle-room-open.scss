@@ -129,8 +129,7 @@ body {
 }
 
 .date-wrapper {
-    margin-bottom: 11px;
-    margin-top: 10px;
+    margin-bottom: 20px;
     width: 100%;
     display: flex;
     margin-bottom: 6px;
@@ -190,7 +189,6 @@ img {
 }
 .left-container__container {
     margin-bottom: 15px;
-    margin-top: 25px;
 }
 
 .header__account-verification {
@@ -310,7 +308,6 @@ img {
 .score-points__title {
     font-size: 14px;
     color: #F8D05F;
-    margin-bottom: 10px;
 }
 .sidebar-menu__balance {
     margin-left: 10px;
@@ -377,9 +374,6 @@ img {
     background: linear-gradient(#22041E, #1D134A);
     border-bottom: 1px solid #FFD762;
 }
-.mobile-header_inner {
-    margin-top: 15px;
-}
 
 .mobile-header_activation {
     display: none;
@@ -391,6 +385,7 @@ img {
     margin-right: 10px;
 }
 .time {
+    margin-bottom: 3px;
     color: #F7D261;
 }
 
@@ -566,7 +561,7 @@ img {
     }
 
     .right-container {
-        margin-top: 3rem;
+        margin-top: 20px;
         margin-left: 0 !important;
         left: 18px;
     }
@@ -633,7 +628,7 @@ img {
    
 
     .containers-second_main {
-        width: 100%;
+        width: 90% !important;
         margin: 0 auto !important;
     }
 
@@ -648,7 +643,7 @@ img {
     }
 
     .date-wrapper {
-        width: 100%;
+        width: 90%;
         position: absolute;
         bottom: 31em;
     }
@@ -729,8 +724,7 @@ img {
 
 
 .left-container__wrapper {
-    margin-top: 15px;
-    margin-left: 20px;
+    margin-top: 20px;
     height: 82%;
     border-right: 1px solid #6A3F3A;
 }
@@ -749,7 +743,6 @@ img {
     margin: 0 auto;
     width: 95%;
     height: 25px;
-    margin-bottom: 45px;
 }
 
 .left-container__header>a {
@@ -774,7 +767,6 @@ img {
 
 .left-container_subheader {
     margin: 0 auto;
-    margin-bottom: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -829,7 +821,6 @@ img {
 
 .left-container__battle-restrictions {
     height: 100px;
-    margin-bottom: 10px;
 }
 
 .left-container__battle-rules_title,
@@ -844,9 +835,6 @@ img {
     line-height: 18px;
     min-height: 90px;
 }
-.left-container__battle-restrictions_text {
-    margin-bottom: 40px;
-}
 
 .profit-tb {
     color: #fff;
@@ -856,7 +844,6 @@ img {
 
 .profit-tb__title {
     font-size: 18px;
-    margin-bottom: 15px;
     color: #F8D05F;
 }
 
@@ -963,12 +950,10 @@ tbody :last-child {
 }
 
 .score-points {
-    margin-right: 20px;
     width: 100%;
 }
 
 .score-points__table {
-    margin-bottom: 20px;
     text-align: center;
     border: 1px solid #F8D05F;
     width: 100%;
@@ -1003,7 +988,7 @@ tbody :last-child {
 .footer-wrapper_battle-room__open {
     position: absolute;
     display: block;
-    padding-top: 90px;
+    padding-top: 20px;
     width: 90%;
     background-color: #0B1432;
     min-width: 305px;
@@ -1012,7 +997,6 @@ tbody :last-child {
 .battle-open__room {
     display: flex;
     justify-content: center;
-    margin-top: 3em;
 }
 
 .footer__title,
@@ -1026,6 +1010,7 @@ tbody :last-child {
 }
 
 .footer-wrapper {
+    font-size: 14px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -1147,6 +1132,12 @@ tbody :last-child {
 
 .stock-close_btn {
     background: none;
+    border: none;
+}
+
+.dropdow-stock {
+    align-items: center;
+    height: auto !important;
     border: none;
 }
 
