@@ -78,8 +78,8 @@ body {
   bottom: 25%;
   margin-right: 18px;
   z-index: 99;
-  width: 88%;
-  padding-left: 30px;
+  width: 100%;
+  padding-left: 10px;
   height: auto;
   border-radius: 25px;
   background-color: #22041E;
@@ -332,10 +332,20 @@ img {
   flex-direction: column;
 }
 
+.game-info-container-navigation_panel > ul > li > a {
+  color: #F8D05F;
+  text-decoration: none;
+}
+
 .game-info-container-navigation_panel {
+  width: 100%;
   font-size: 14px;
   position: relative;
   z-index: 99;
+  width: 100%;
+}
+
+.game-info-container-navigation_panel > ul {
   width: 100%;
 }
 
@@ -533,6 +543,10 @@ img {
   display: flex;
 }
 
+.score-points__title {
+  margin-top: 20px;
+}
+
 .no-players_wrapper {
   width: 90%;
 }
@@ -541,10 +555,24 @@ img {
   margin-left: 10px;
 }
 
+.mobile-header_activation {
+  justify-content: center;
+}
+
 @media (max-width: 1025px) {
+  .left-right_container {
+    height: 200px !important;
+  }
+  .game-info-container-navigation_panel > ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  .social-media_container {
+    bottom: 12%;
+  }
   .social-logos_wrapper {
     position: relative;
-    top: 20em;
+    top: 10em;
   }
   .score-points {
     left: 10px;
@@ -609,7 +637,7 @@ img {
     transform: translateY(40px);
   }
   .containers-second_main {
-    width: 100%;
+    width: 90% !important;
     margin: 0 auto !important;
   }
   .mobile-header_activation {
@@ -630,13 +658,27 @@ img {
     margin-bottom: 30px;
   }
 }
+@media (max-width: 447px) {
+  .decrease {
+    width: 45% !important;
+  }
+}
+@media (max-width: 400px) {
+  .decrease {
+    width: 55% !important;
+  }
+}
+@media (max-width: 328px) {
+  .decrease {
+    width: 65% !important;
+  }
+}
 @media (max-width: 450px) {
   .game-info-container-navigation_panel {
     font-size: 14px;
     width: 120%;
   }
   .game-info-container-navigation_panel > ul > li {
-    width: 35px;
     margin-right: 3px;
   }
   .burger-container {
@@ -796,7 +838,7 @@ img {
 
 .profit-tb {
   color: #fff;
-  font-size: 12px;
+  font-size: 10px;
   margin-top: 20px;
 }
 
@@ -1213,6 +1255,7 @@ tbody :last-child {
 }
 
 .stock-table-row__index {
+  border-radius: 2px;
   width: 30px;
   height: 20px;
   background-color: #ffd600;
