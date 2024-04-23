@@ -45,7 +45,6 @@ body {
 .main::before {
   content: "";
   background-image: url("../assets/img/left-side-bg.png");
-  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   width: 35%;
   height: 44%;
@@ -116,7 +115,7 @@ body {
 }
 
 .social-media_share > span {
-  font-size: 11px;
+  font-size: 14px;
   color: #F8D05F;
 }
 
@@ -195,7 +194,7 @@ img {
 
 .sidebars-inner_wrapper {
   position: absolute;
-  height: 128%;
+  height: calc(125% + 5px);
   border-bottom: none;
 }
 
@@ -323,11 +322,12 @@ img {
   position: relative;
   z-index: 98;
   width: 70%;
-  margin-left: 20px !important;
+  margin-left: 17px !important;
 }
 
 .score-points__title {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 500;
   color: #F8D05F;
 }
 
@@ -579,7 +579,7 @@ img {
   }
   .game-info-container-navigation_panel > ul {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
   }
   .social-media_container {
     bottom: 12%;
@@ -596,6 +596,8 @@ img {
   .right-container {
     margin-top: 20px;
     margin-left: 0 !important;
+    margin-right: 7px;
+    max-width: 99% !important;
     left: 18px;
   }
   .social-media {
@@ -609,6 +611,7 @@ img {
   }
   .main {
     height: 100%;
+    background-size: unset;
   }
   .no-players_container-hidden {
     display: flex;
@@ -642,6 +645,7 @@ img {
     display: flex !important;
   }
   .containers-wrapper, .containers-wrapper__first {
+    margin-right: -12px !important;
     align-content: center;
     flex-direction: column;
     width: 100%;
@@ -683,7 +687,7 @@ img {
     width: 120%;
   }
   .game-info-container-navigation_panel > ul > li {
-    margin-right: 3px;
+    margin-right: 20px;
   }
   .burger-container {
     margin-right: 10px;
@@ -781,6 +785,7 @@ img {
 }
 
 .left-container__balance {
+  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -825,7 +830,8 @@ img {
 .left-container__battle-restrictions_title {
   font-size: 14px;
   color: #F8D05F;
-  font-style: normal;
+  font-weight: 500;
+  margin-top: 20px;
 }
 
 .left-container__battle-rules_text,
@@ -844,6 +850,7 @@ img {
 .profit-tb__title {
   font-size: 16px;
   font-style: normal;
+  font-weight: 500;
   color: #F8D05F;
 }
 
@@ -933,6 +940,7 @@ tbody :last-child {
   margin-top: 30px;
   align-self: end;
   float: right;
+  font-style: 14px;
 }
 
 .marshall {
@@ -1069,7 +1077,8 @@ tbody :last-child {
 
 .right-container__join-battle_title {
   color: #F8D05F;
-  font-size: 18px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .right-container__join-battle_subtitle {
@@ -1078,7 +1087,7 @@ tbody :last-child {
 
 .right-container__join-battle_search-field {
   margin-top: 20px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   font-size: 18px;
   width: 100%;
   padding-bottom: 5px;
@@ -1187,7 +1196,7 @@ tbody :last-child {
 
 .selected-stock_line {
   font-size: 14px;
-  color: #fff;
+  color: #D455C1;
   display: flex;
   align-items: center;
   padding-left: 10px;
@@ -1213,7 +1222,6 @@ tbody :last-child {
 
 .selected-stocks {
   width: 100%;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
@@ -1233,6 +1241,7 @@ tbody :last-child {
   font-style: normal;
   margin-top: 20px;
   font-size: 16px;
+  font-weight: 500;
   color: #F8D05F;
 }
 
