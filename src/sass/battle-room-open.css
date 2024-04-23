@@ -37,16 +37,21 @@ body {
   background-repeat: no-repeat;
   background-position: top;
   height: calc(59rem + 7px);
+  background-blend-mode: multiply;
+  background-color: rgba(17, 18, 17, 0.5);
+  background-size: cover;
 }
 
 .main::before {
   content: "";
   background-image: url("../assets/img/left-side-bg.png");
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   width: 35%;
   height: 44%;
   background-repeat: no-repeat;
   top: 80px;
+  z-index: 0;
 }
 
 .main::after {
@@ -57,6 +62,7 @@ body {
   width: 29%;
   height: 44%;
   top: 80px;
+  z-index: 0;
 }
 
 .players-count {
@@ -87,6 +93,8 @@ body {
 }
 
 .social-close_btn {
+  margin-right: 7px;
+  width: 15px;
   height: 100%;
   background: none;
   border: none;
@@ -97,40 +105,46 @@ body {
 }
 
 .decrease {
-  width: 40% !important;
+  padding-left: 15px;
+  justify-content: center;
+  width: 105px !important;
 }
 
 .social-media > a > img {
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
 }
 
 .social-media_share > span {
-  font-size: 13px;
-  margin-left: 5px;
+  font-size: 11px;
   color: #F8D05F;
 }
 
 .social-media_share {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-width: 75px;
+  margin-top: 1px;
+  margin-right: 10px;
 }
 
 .social-media {
   height: 35px;
-  width: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-around;
+  position: absolute;
+  right: 0;
+  bottom: 25%;
+  margin-right: 18px;
+  z-index: 99;
+  width: 100%;
+  border-radius: 25px;
+  background-color: #22041E;
+  border: 1px solid #6A3F3A;
 }
 
 .date-wrapper {
-  margin-bottom: 20px;
   width: 100%;
   display: flex;
-  margin-bottom: 6px;
+  margin-bottom: 13px;
   justify-content: center;
   align-items: center;
   background-color: #2A1163;
@@ -168,6 +182,8 @@ img {
 }
 
 .wrappers {
+  z-index: 99;
+  position: relative;
   background: border-box;
   flex-wrap: nowrap;
 }
@@ -179,7 +195,7 @@ img {
 
 .sidebars-inner_wrapper {
   position: absolute;
-  height: 127%;
+  height: 128%;
   border-bottom: none;
 }
 
@@ -295,6 +311,7 @@ img {
   background-color: #2151A1 !important;
   color: #fff !important;
   border-radius: 6px !important;
+  font-size: 14px;
 }
 
 .first-col {
@@ -554,6 +571,9 @@ img {
 }
 
 @media (max-width: 1025px) {
+  .profit-tb, .left-container__battle-restrictions, .left-container__battle-rules {
+    margin-left: 15px;
+  }
   .left-right_container {
     height: 200px !important;
   }
@@ -579,6 +599,7 @@ img {
     left: 18px;
   }
   .social-media {
+    bottom: 15%;
     width: 100%;
     display: flex;
     align-items: center;
@@ -621,6 +642,7 @@ img {
     display: flex !important;
   }
   .containers-wrapper, .containers-wrapper__first {
+    align-content: center;
     flex-direction: column;
     width: 100%;
   }
@@ -651,20 +673,8 @@ img {
   .logo-img_main-logo {
     margin-bottom: 30px;
   }
-}
-@media (max-width: 447px) {
-  .decrease {
-    width: 45% !important;
-  }
-}
-@media (max-width: 400px) {
-  .decrease {
-    width: 55% !important;
-  }
-}
-@media (max-width: 328px) {
-  .decrease {
-    width: 65% !important;
+  .left-container__wrapper {
+    border-right: none !important;
   }
 }
 @media (max-width: 450px) {
@@ -728,6 +738,7 @@ img {
   margin: 0 auto;
   width: 95%;
   height: 25px;
+  font-size: 14px;
 }
 
 .left-container__header > a {
@@ -766,6 +777,7 @@ img {
   text-align: center;
   margin-top: 20px;
   color: #FEFFAB;
+  font-size: 14px;
 }
 
 .left-container__balance {
@@ -811,8 +823,9 @@ img {
 
 .left-container__battle-rules_title,
 .left-container__battle-restrictions_title {
-  font-size: 20px;
+  font-size: 14px;
   color: #F8D05F;
+  font-style: normal;
 }
 
 .left-container__battle-rules_text,
@@ -829,7 +842,8 @@ img {
 }
 
 .profit-tb__title {
-  font-size: 18px;
+  font-size: 16px;
+  font-style: normal;
   color: #F8D05F;
 }
 
@@ -1033,6 +1047,7 @@ tbody :last-child {
 }
 
 .timer {
+  font-size: 14px;
   margin-bottom: 5px;
   color: #fff;
 }
@@ -1081,6 +1096,16 @@ tbody :last-child {
   background-color: #340432;
   border: none;
   padding-left: 10px;
+}
+
+#search-field::-moz-placeholder {
+  font-size: 12px;
+  color: #fff;
+}
+
+#search-field::placeholder {
+  font-size: 12px;
+  color: #fff;
 }
 
 .right-container__join-battle_search-field_icon {
@@ -1161,15 +1186,20 @@ tbody :last-child {
 }
 
 .selected-stock_line {
+  font-size: 14px;
+  color: #fff;
   display: flex;
   align-items: center;
   padding-left: 10px;
   width: 100%;
   height: 40%;
   background-color: #22041E;
-  margin-top: 10px;
   margin-bottom: 10px;
   border-radius: 6px;
+}
+
+.selected-stock_line:last-child {
+  margin-bottom: 0;
 }
 
 .hidden-header__buttons {
@@ -1190,7 +1220,7 @@ tbody :last-child {
 }
 
 .selected-stocks__title {
-  line-height: 50px;
+  margin-top: 20px;
   color: #FEFFAB;
   font-size: 17px;
 }
@@ -1200,12 +1230,14 @@ tbody :last-child {
 }
 
 .selected-stocks__subtitle {
-  line-height: 50px;
-  font-size: 18px;
+  font-style: normal;
+  margin-top: 20px;
+  font-size: 16px;
   color: #F8D05F;
 }
 
 .selected-stocks__text {
+  margin-top: 20px;
   color: #fff;
 }
 
@@ -1283,5 +1315,5 @@ tbody :last-child {
   border: 1px solid #F8D05F;
   background-color: #133D1E;
   width: 99%;
-  height: 50px;
+  height: 37px;
 }/*# sourceMappingURL=battle-room-open.css.map */

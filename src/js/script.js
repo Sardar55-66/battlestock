@@ -1,7 +1,7 @@
 
 const arr = Array.from(document.querySelectorAll('.social-media_page'))
 const btn = document.querySelector('.social-close_btn')
-const container = document.querySelector('.social-media_container')
+const container = document.querySelector('.social-media')
 
 
 btn.addEventListener('click', () => {
