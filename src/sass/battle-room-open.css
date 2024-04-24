@@ -40,6 +40,7 @@ body {
   background-blend-mode: multiply;
   background-color: rgba(17, 18, 17, 0.5);
   background-size: cover;
+  overflow-x: hidden;
 }
 
 .main::before {
@@ -612,6 +613,9 @@ img {
   .main {
     height: 100%;
     background-size: unset;
+  }
+  .main::before, .main::after {
+    width: 0;
   }
   .no-players_container-hidden {
     display: flex;
