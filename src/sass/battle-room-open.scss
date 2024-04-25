@@ -185,7 +185,7 @@ img {
     height: 100rem;
 }
 .wrappers {
-    z-index: 99;
+    z-index: 95;
     position: relative;
     background: border-box;
     flex-wrap: nowrap;
@@ -198,7 +198,7 @@ img {
 
 .sidebars-inner_wrapper {
     position: absolute;
-    height: calc(125% + 5px);
+    height: 125%;
     border-bottom: none;
 }
 .sidebar__header {
@@ -503,6 +503,13 @@ img {
 .hidden-header__buttons>.header-button>img {
     width: 28px;
     height: 28px;
+    margin-right: 10px;
+}
+.header-button {
+    width: 40%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
 }
 .header-button__text {
     margin-top: 10px;
@@ -538,6 +545,7 @@ img {
 
 .score-points__title {
     margin-top: 20px;
+    margin-bottom: 10px;
 }
 
 .no-players_wrapper {
@@ -711,6 +719,10 @@ img {
 
 @media(max-width: 450px) {
 
+    .header-button {
+        width: 50%;
+    }
+
     .game-info-container-navigation_panel {
         font-size: 14px;
         width: 120%;
@@ -846,6 +858,10 @@ img {
     height: 25px;
 }
 
+.left-container__icon {
+    margin-bottom: 20px;
+}
+
 .left-container__icon>img {
     width: 90px;
     height: 27px;
@@ -861,7 +877,7 @@ img {
 }
 
 .left-container__battle-restrictions {
-    height: 100px;
+    height: 78px;
 }
 
 .left-container__battle-rules_title,
@@ -869,20 +885,20 @@ img {
     font-size: 14px;
     color: #F8D05F;
     font-weight: 500;
-    margin-top: 20px;
 }
 
 .left-container__battle-rules_text,
 .left-container__battle-restrictions_text {
     font-size: 12px;
     line-height: 18px;
-    min-height: 90px;
+    min-height: 45px;
 }
 
 .profit-tb {
     color: #fff;
     font-size: 10px;
     margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .profit-tb__title {
@@ -1028,13 +1044,12 @@ tbody :last-child {
 }
 
 .footer {
-    min-height: 250px;
+    min-height: 220px;
 }
 
 .footer-wrapper_battle-room__open {
     position: absolute;
     display: block;
-    padding-top: 20px;
     width: 90%;
     background-color: #0B1432;
     min-width: 305px;
@@ -1047,6 +1062,7 @@ tbody :last-child {
 
 .footer__title,
 .footer__subtitle {
+    font-weight: 400;
     text-align: center;
     color: #AF894A;
 }
@@ -1091,7 +1107,7 @@ tbody :last-child {
     position: relative;
     margin: 0 auto;
     display: flex;
-    width: 90%;
+    width: 100%;
     height: 50px;
 }
 .open-btn>div {
