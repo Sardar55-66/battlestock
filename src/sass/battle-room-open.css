@@ -142,20 +142,21 @@ body {
   bottom: 35%;
   margin-right: 18px;
   z-index: 99;
-  width: 100%;
+  width: 90%;
   border-radius: 25px;
   background-color: #22041E;
   border: 1px solid #6A3F3A;
 }
 
 .date-wrapper {
+  font-size: 12px;
   width: 100%;
   display: flex;
   margin-bottom: 13px;
   justify-content: center;
   align-items: center;
   background-color: #2A1163;
-  min-width: 150px;
+  min-width: 160px;
   height: 30px;
   color: #fff;
   border-radius: 25px;
@@ -266,6 +267,7 @@ img {
 }
 
 .header__avatar img {
+  align-self: center;
   width: 40px;
   height: 40px;
 }
@@ -412,10 +414,11 @@ img {
   color: #FEFFAB;
   border-right: 1px solid #F8D05F;
   padding-right: 10px;
-  margin-right: 10px;
+  margin-right: 5px;
 }
 
 .time {
+  margin-right: 10px;
   margin-bottom: 3px;
   color: #F7D261;
 }
@@ -589,7 +592,7 @@ img {
 
 @media (max-width: 1025px) {
   .left-container {
-    width: 104vw;
+    width: 100vw;
   }
   .profit-tb, .left-container__battle-restrictions, .left-container__battle-rules {
     margin-left: 15px;
@@ -696,7 +699,7 @@ img {
   .date-wrapper {
     width: 90%;
     position: absolute;
-    bottom: 31em;
+    bottom: 30em;
   }
   .logo-img_main-logo {
     margin-bottom: 30px;
@@ -707,7 +710,7 @@ img {
 }
 @media (max-width: 450px) {
   .header-button {
-    width: 50%;
+    width: 60%;
   }
   .game-info-container-navigation_panel {
     font-size: 14px;
@@ -896,6 +899,8 @@ img {
   color: #FFD762;
   width: calc(4em + 15px);
   text-align: center;
+  font-size: 11px;
+  font-weight: 100;
 }
 
 .profit-tb__table td {
@@ -999,6 +1004,11 @@ tbody :last-child {
   border: 1px solid #F8D05F;
 }
 
+.score-points__tr > td > div {
+  font-weight: 100;
+  font-size: 12px;
+}
+
 .score-points__tr > th {
   border: 1px solid #F8D05F;
 }
@@ -1006,6 +1016,11 @@ tbody :last-child {
 .score-points__table-logo > img {
   width: 25px;
   height: 25px;
+}
+
+.score-points > td > div {
+  font-size: 12px;
+  font-weight: 100;
 }
 
 .sergeant {
@@ -1140,11 +1155,13 @@ tbody :last-child {
 #search-field::-moz-placeholder {
   font-size: 12px;
   color: #fff;
+  font-weight: 100;
 }
 
 #search-field::placeholder {
   font-size: 12px;
   color: #fff;
+  font-weight: 100;
 }
 
 .right-container__join-battle_search-field_icon {
@@ -1258,7 +1275,7 @@ tbody :last-child {
 }
 
 .selected-stocks__title {
-  margin-top: 20px;
+  margin-top: 10px;
   color: #FEFFAB;
   font-size: 14px;
 }
@@ -1269,14 +1286,14 @@ tbody :last-child {
 
 .selected-stocks__subtitle {
   font-style: normal;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 16px;
   font-weight: 500;
   color: #F8D05F;
 }
 
 .selected-stocks__text {
-  margin-top: 20px;
+  margin-top: 10px;
   color: #fff;
 }
 
@@ -1315,6 +1332,8 @@ tbody :last-child {
 }
 
 .stock-table-row__index {
+  font-size: 14px;
+  font-weight: 100;
   border-radius: 2px;
   width: 30px;
   height: 20px;
