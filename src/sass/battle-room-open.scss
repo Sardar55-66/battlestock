@@ -571,6 +571,15 @@ img {
 
 @media(max-width: 1025px) {
 
+    .elapsed {
+        max-width: 100%;
+        padding-bottom: 35px !important;
+    }
+    
+    .social-logos_wrapper {
+        top: 12em;
+    }
+
     .main {
         overflow: hidden;
         overflow-x: hidden;
@@ -580,9 +589,9 @@ img {
         width: 100% !important;
     }
 
-    .left-container {
-        width: 100vw;
-    }
+    // .left-container {
+    //     width: 100vw;
+    // }
 
     .profit-tb, .left-container__battle-restrictions, .left-container__battle-rules {
         margin-left: 15px;
@@ -740,6 +749,14 @@ img {
 
 
 @media(max-width: 450px) {
+
+    .social-logos_wrapper {
+        top: 11em;
+    }
+
+    div.elapsed {
+        padding-bottom: 0px !important;
+    }
 
     .header-button {
         width: 60%;
@@ -961,7 +978,7 @@ tbody :last-child {
 }
 
 .elapsed {
-    max-width: 100%;
+    width: 100%;
     padding-bottom: 80px;
 }
 
@@ -1057,6 +1074,8 @@ tbody :last-child {
 
 .score-points__tr>th {
     border: 1px solid #F8D05F;
+    font-size: 12px;
+    font-weight: 100;
 }
 
 .score-points__table-logo>img {
