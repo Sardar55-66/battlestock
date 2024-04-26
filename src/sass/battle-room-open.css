@@ -7,9 +7,14 @@ html {
 
 @font-face {
   font-family: "Gordita";
-  src: url("../fonts/GorditaMedium.eot");
-  src: url("../fonts/GorditaMedium.eot?#iefix") format("embedded-opentype"), url("../fonts/GorditaMedium.woff") format("woff"), url("../fonts/GorditaMedium.ttf") format("truetype");
+  src: url("../fonts/GorditaLight.ttf") format("truetype");
   font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Gordita";
+  src: url("../fonts/GorditaMedium.ttf") format("truetype");
+  font-style: medium;
   font-weight: 500;
 }
 @font-face {
@@ -20,6 +25,7 @@ html {
 }
 body {
   font-family: "Gordita";
+  font-weight: 300;
   background-color: linear-gradient(#260021, #0B1432) !important;
   font-size: 12px;
   min-width: 305px;
@@ -31,8 +37,9 @@ body {
 }
 
 .main {
+  font-family: "Gordita";
+  font-weight: 300;
   background-image: url("../assets/img/bear_bull-main_bg.png");
-  font-size: 12px;
   height: auto;
   background-repeat: no-repeat;
   background-position: top;
@@ -131,8 +138,8 @@ body {
   align-items: center;
   justify-content: space-around;
   position: absolute;
-  right: 0;
-  bottom: 25%;
+  right: 30px;
+  bottom: 35%;
   margin-right: 18px;
   z-index: 99;
   width: 100%;
@@ -581,6 +588,9 @@ img {
 }
 
 @media (max-width: 1025px) {
+  .left-container {
+    width: 104vw;
+  }
   .profit-tb, .left-container__battle-restrictions, .left-container__battle-rules {
     margin-left: 15px;
   }
@@ -596,12 +606,12 @@ img {
   }
   .social-logos_wrapper {
     position: relative;
-    top: 10em;
+    top: 15em;
   }
   .score-points {
     left: 10px;
     position: relative;
-    bottom: 15em;
+    bottom: 5em;
   }
   .right-container {
     margin-top: 20px;
@@ -611,6 +621,7 @@ img {
     left: 18px;
   }
   .social-media {
+    right: 0;
     bottom: 15%;
     width: 100%;
     display: flex;
@@ -801,7 +812,6 @@ img {
 }
 
 .left-container__balance {
-  margin-top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -835,7 +845,6 @@ img {
 
 .left-container__battle-rules,
 .left-container__battle-restrictions {
-  margin-top: 20px;
   border-bottom: 1px solid #6A3F3A;
   padding-top: 10px;
   color: #fff;
@@ -905,6 +914,7 @@ tbody :last-child {
 
 .elapsed {
   max-width: 100%;
+  padding-bottom: 80px;
 }
 
 .left-right_container {
@@ -994,8 +1004,8 @@ tbody :last-child {
 }
 
 .score-points__table-logo > img {
-  width: 20px;
-  height: 15px;
+  width: 25px;
+  height: 25px;
 }
 
 .sergeant {
@@ -1250,7 +1260,7 @@ tbody :last-child {
 .selected-stocks__title {
   margin-top: 20px;
   color: #FEFFAB;
-  font-size: 17px;
+  font-size: 14px;
 }
 
 .selected-stocks__title > span {
