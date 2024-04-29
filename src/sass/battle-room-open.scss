@@ -204,7 +204,7 @@ img {
 
 .sidebars-inner_wrapper {
     position: absolute;
-    height: 121%;
+    height: 120%;
     border-bottom: none;
 }
 .sidebar__header {
@@ -573,6 +573,10 @@ img {
 
 @media(max-width: 1025px) {
 
+    .left-right-container_headers {
+        margin-left: 2%;
+    }
+
     .elapsed {
         max-width: 100%;
         padding-bottom: 35px !important;
@@ -618,7 +622,7 @@ img {
     }
 
     .score-points {
-        width: auto !important;
+        width: 100% !important;
         position: relative;
         bottom: 5em;
     }
@@ -726,7 +730,6 @@ img {
     }
 
     .left-container__wrapper {
-        transform: translate(15px);
         border-right: none !important;
     }
 }
@@ -753,12 +756,24 @@ img {
 
 @media(max-width: 450px) {
 
+    .left-right-container_headers {
+        margin-left: 4%;
+    }
+
+    .left-right_container {
+        height: 220px !important;
+    }
+
+    .social-media {
+        bottom: 0%;
+    }
+
     .left-container__battle-restrictions {
         height: 100px !important;
     }
 
     .social-logos_wrapper {
-        top: 11em;
+        top: 12em;
     }
 
     div.elapsed {
@@ -947,7 +962,7 @@ img {
 
 .profit-tb {
     color: #fff;
-    font-size: 1px;
+    font-size: 11px;
     margin-top: 20px;
     margin-bottom: 20px;
 }
@@ -957,6 +972,7 @@ img {
     font-style: normal;
     font-weight: 500;
     color: #F8D05F;
+    margin-bottom: 10px;
 }
 
 .profit-tb__table {
@@ -1416,7 +1432,7 @@ tbody :last-child {
 
 .stock-table-row__index {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     font-size: 14px;
     font-weight: 400;
     border-radius: 2px;
@@ -1427,13 +1443,14 @@ tbody :last-child {
     width: 50px;
     height: 18px;
     text-align: center;
+    align-items: center;
 }
 
 .stock-table-row__index::after {
     content: '-';
     color: #fff;
     position: relative;
-    left: 14px;
+    left: 10px;
 }
 
 .stock-table-row__text {
