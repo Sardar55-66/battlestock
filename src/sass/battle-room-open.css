@@ -254,7 +254,7 @@ img {
 
 .sidebar-avatar-id__wrapper {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-end;
   font-size: 14px;
   width: 50%;
@@ -266,7 +266,7 @@ img {
 }
 
 .header__avatar img {
-  align-self: center;
+  margin-top: 10px;
   width: 40px;
   height: 40px;
 }
@@ -387,7 +387,7 @@ img {
 }
 
 .left-container {
-  border-bottom: 1px solid #F8D05F;
+  margin-left: 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -533,7 +533,7 @@ img {
 }
 
 .header-button {
-  width: 40%;
+  width: 42%;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -574,12 +574,12 @@ img {
 }
 
 .score-points__title {
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 10px;
 }
 
 .no-players_wrapper {
-  margin: 0 auto;
+  margin: 0 auto !important;
   width: 90%;
 }
 
@@ -621,7 +621,7 @@ img {
   }
   .social-logos_wrapper {
     position: relative;
-    top: 15em;
+    top: 12em;
   }
   .score-points {
     width: auto !important;
@@ -717,10 +717,14 @@ img {
     margin-bottom: 30px;
   }
   .left-container__wrapper {
+    transform: translate(15px);
     border-right: none !important;
   }
 }
 @media (max-width: 450px) {
+  .left-container__battle-restrictions {
+    height: 100px !important;
+  }
   .social-logos_wrapper {
     top: 11em;
   }
@@ -899,7 +903,7 @@ img {
 
 .profit-tb {
   color: #fff;
-  font-size: 10px;
+  font-size: 1px;
   margin-top: 20px;
   margin-bottom: 20px;
 }
@@ -1222,6 +1226,7 @@ tbody :last-child {
   background-color: #3A0F34;
   width: 100%;
   text-align: center;
+  align-items: center;
 }
 
 .stock-close_btn {
@@ -1229,7 +1234,7 @@ tbody :last-child {
   border: none;
 }
 
-.dropdow-stock {
+.dropdown-stock {
   align-items: center;
   height: auto !important;
   border: none;
@@ -1349,6 +1354,7 @@ tbody :last-child {
 .stock-table > div {
   margin-bottom: 10px;
   scroll-margin-right: 5px;
+  border-bottom: 1px solid #6A3F3A;
 }
 
 .stock-table::-webkit-scrollbar {
@@ -1366,6 +1372,8 @@ tbody :last-child {
 }
 
 .stock-table-row__index {
+  display: flex;
+  justify-content: center;
   font-size: 14px;
   font-weight: 400;
   border-radius: 2px;
@@ -1396,7 +1404,7 @@ tbody :last-child {
   height: 30px;
   display: flex;
   justify-content: flex-start;
-  border-bottom: 1px solid #6A3F3A;
+  align-items: center;
 }
 
 .selected-stocks__enter-btn {
@@ -1408,4 +1416,6 @@ tbody :last-child {
   background-color: #133D1E;
   width: 99%;
   height: 37px;
+  font-size: 12px;
+  font-weight: 400;
 }/*# sourceMappingURL=battle-room-open.css.map */
