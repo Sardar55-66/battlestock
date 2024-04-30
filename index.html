@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="./src/sass/style.css">    
+    <link rel="stylesheet" href="./src/sass/registration.css">    
     <link rel="stylesheet" href="./src/bootstrap-4.6/bootstrap.min.css">
     <link rel="stylesheet" href="./src/bootstrap-4.6/bootstrap-grid.css">
     <title>Battle Stock</title>
@@ -35,7 +35,27 @@
                         <div class="row form-wrapper">
                             <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-md-end red-star">
                                 <label class="required"></label>
-                                <input id="login" class="login login__username" type="text" placeholder="Login">
+                                <input id="first-name" class="login login__username" type="text" placeholder="First Name">
+                            </div>
+
+                            <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-md-start red-star">
+                                <label class="required"></label>
+                                <input id="last-name" class="login login__username" type="text" placeholder="Last Name">
+                            </div>
+
+                            <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-md-end red-star">
+                                <label class="required"></label>
+                                <input id="nickname" class="login login__username" type="text" placeholder="Nickname">
+                            </div>
+
+                            <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-md-start red-star">
+                                <label class="required-4"></label>
+                                <input id="phone" class="login login__username" type="tel">
+                            </div>
+
+                            <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-md-end red-star">
+                                <label class="required-3"></label>
+                                <input id="email" class="login login__username" type="email" placeholder="Email">
                             </div>
                             
                             <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-xl-start"> 
@@ -46,9 +66,12 @@
                     
                     <div class="row btn-submit">
                         <div class="col-12">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" class="custom-checkbox" id="age-conf" name="age" value="yes">
+                                <label for="age-conf" class="register-link">I certify that I am 18 years or older</label>
+                            </div>
                             <input class="ta-center" type="submit" value="Join Now">
                         </div>
-                        <div class="col-12 register-link">If you are not yet registered, then go through the <a class="register-link registration" href="#">registration</a> first.</div>
                     </div>
                     
             </form>
