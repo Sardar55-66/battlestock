@@ -36,8 +36,6 @@ body {
   align-items: center;
   justify-content: space-between;
   display: flex;
-  height: 100%;
-  max-width: 900px;
 }
 
 .form-block {
@@ -293,6 +291,16 @@ label {
   padding-top: 50px;
 }
 
+.footer-logo_wrapper {
+  padding: 0;
+  width: 233px;
+  height: 53px;
+}
+
+.footer-logo_wrapper > img {
+  width: 100%;
+}
+
 .registration-title {
   color: #fff;
   font-size: 28px;
@@ -305,7 +313,10 @@ label {
 
 @media (max-width: 1024px) {
   .form-wrapper > div:first-child {
-    margin-bottom: 12px;
+    margin-bottom: 18px;
+  }
+  .form-block {
+    margin-bottom: 245px;
   }
 }
 @media (max-width: 768px) {
@@ -313,11 +324,17 @@ label {
   .subtitle {
     font-size: 24px;
   }
+  .form-block {
+    margin-bottom: 238px;
+  }
 }
 @media (max-width: 488px) {
   .title,
   .subtitle {
     font-size: 22px;
+  }
+  .form-block {
+    margin-bottom: 170px;
   }
 }
 @media (max-width: 423px) {
@@ -330,5 +347,14 @@ label {
   .title,
   .subtitle {
     font-size: 19px;
+  }
+}
+@media (max-width: 210px) {
+  .title,
+  .subtitle {
+    font-size: 19px;
+  }
+  .form-block {
+    margin-bottom: 78px;
   }
 }/*# sourceMappingURL=style.css.map */
