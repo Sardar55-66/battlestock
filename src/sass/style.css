@@ -4,13 +4,33 @@ html {
   overflow-x: hidden;
 }
 
+@font-face {
+  font-family: "Gordita";
+  src: url("../fonts/GorditaLight.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Gordita";
+  src: url("../fonts/GorditaMedium.ttf") format("truetype");
+  font-style: medium;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Sawarabi";
+  src: url("../fonts/SawarabiMincho-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
 body {
+  font-family: "Gordita";
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
 }
 
 .main-container {
+  font-family: "Gordita";
   min-height: 105rem;
   background-image: url("../assets/img/bg-main-pic.png");
   background-repeat: no-repeat;
@@ -47,8 +67,10 @@ body {
   text-align: center;
   text-transform: uppercase;
   color: #fff;
-  font-size: 55px;
-  margin-bottom: 30px;
+  font-size: 36px;
+  font-weight: 800;
+  font-family: "Gordita";
+  margin-bottom: 18px;
 }
 
 .star {
@@ -63,13 +85,23 @@ body {
 .login-form {
   box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
   text-align: center;
-  max-width: 90%;
+  width: 587px;
   border-radius: 12px;
-  background: linear-gradient(0.25turn, #350B2D, #8C5B82, #350B2D);
+  background: linear-gradient(0.25turn, #2E0327, #6D1153, #2E0327);
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 380px;
+  min-height: 221px;
   padding-top: 50px;
+}
+
+.btn-submit {
+  margin: 0 auto;
+}
+
+.form-wrapper {
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
 }
 
 .login__username,
@@ -83,11 +115,31 @@ body {
   width: 85%;
 }
 
+input[type=submit] {
+  width: 246px;
+  height: 50px;
+  background-color: #FFD762;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+#login, #pass {
+  width: 250px;
+  height: 37px;
+  background-color: #350B2D;
+  border: 1px solid #8C5B82;
+  font-size: 14px;
+  font-weight: normal;
+}
+
 .required:after {
   content: " *";
   color: red;
   position: relative;
-  left: 59px;
+  left: 50px;
   z-index: 99;
 }
 
@@ -95,7 +147,7 @@ body {
   content: " *";
   color: red;
   position: relative;
-  left: 86px;
+  left: 75px;
   z-index: 99;
 }
 
@@ -112,7 +164,11 @@ body {
 }
 
 .register-link {
+  margin: 0 auto;
+  font-size: 14px;
+  font-weight: normal;
   color: #fff;
+  margin-bottom: 30px;
 }
 
 .registration {
@@ -206,6 +262,10 @@ div .w-100 {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 50% 50%;
+}
+
+label {
+  width: 0;
 }
 
 .age-confirmation:checked + label::before {
