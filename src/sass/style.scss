@@ -19,15 +19,8 @@ html {
     font-weight: 500;
 }
 
-@font-face { 
-    font-family: "Sawarabi";
-    src: url("../fonts/SawarabiMincho-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: 500;
-}
-
 body {
-    font-family: 'Gordita';
+    font-family:'Gordita';
     width: 100%;
     max-width: 100%;
     overflow-x: hidden;
@@ -35,11 +28,10 @@ body {
 
 .main-container {
     font-family: 'Gordita';
-    min-height: 105rem;
     background-image: url('../assets/img/bg-main-pic.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-position: top;
+    min-height: 1080px;
 }
 
 .entire-container {
@@ -49,22 +41,20 @@ body {
     display: flex;
     height: 100%;
     max-width: 900px;
-    min-height: 105rem;
 }
 
-.wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 53rem;
-
+.form-block {
+    margin-bottom: 265px;
 }
-
 .main-logo img {
-    width: 300px;
-    margin-bottom: 50px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    width: 170px;
+    height: 86px;
+}
+
+.title-text {
+    margin-bottom: 45px;
 }
 
 
@@ -187,16 +177,22 @@ div .w-100 {
 }
 
 .footer {
-    min-height: 250px;
+    height: 180px;
 }
 
 .footer__title,
 .footer__subtitle {
+    
+    font-size: 14px;
+    font-weight: normal;
+    font-family: 'Gordita';
     text-align: center;
     color: #AF894A;
 }
 
 .footer__logos {
+    margin-top: 25px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -314,3 +310,41 @@ label {
     color: #fff;
     font-size: 24px;
 }
+
+@media(max-width: 1024px) {
+    .form-wrapper>div:first-child {
+        margin-bottom: 18px;
+    }
+}
+
+@media(max-width: 768px) {
+    
+.title,
+.subtitle {
+    font-size: 24px ;
+    }
+}
+
+@media(max-width: 488px) {
+    
+    .title,
+    .subtitle {
+        font-size: 22px ;
+        }
+    }
+
+    @media(max-width: 423px) {
+    
+        .title,
+        .subtitle {
+            font-size: 20px ;
+            }
+        }
+
+        @media(max-width: 388px) {
+    
+            .title,
+            .subtitle {
+                font-size: 19px ;
+                }
+            }
