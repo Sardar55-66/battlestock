@@ -116,6 +116,19 @@ body {
   width: 105px !important;
 }
 
+.status-bar {
+  width: 250px;
+  height: 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000000;
+  background-color: #ffd600;
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
 .social-media > a > img {
   width: 25px;
   height: 25px;
