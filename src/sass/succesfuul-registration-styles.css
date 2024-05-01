@@ -38,7 +38,7 @@ body {
 
 .wrapper {
   height: 100%;
-  width: 90%;
+  width: 100%;
   background-image: url("../assets/img/Confetti.png");
   background-repeat: no-repeat;
   margin: 0 auto;
@@ -135,6 +135,7 @@ body {
 }
 
 .registration-title {
+  max-width: 341px;
   margin-top: 60px;
   color: #fff;
   font-size: 28px;
@@ -150,6 +151,16 @@ body {
 }
 
 @media (max-width: 1024px) {
+  .entire-container {
+    padding: 0;
+  }
+  .registration-title {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .deposit, .deposit-ok {
+    font-weight: 400;
+  }
   .main-container {
     background-size: 129em;
   }
