@@ -1,0 +1,166 @@
+$color_1: #AF894A;
+$color_2: #F8D05F;
+$color_3: #fff;
+$font-family_1: "Gordita";
+$background-color_1: #350B2D;
+
+@font-face {
+	font-family: "Gordita";
+	src: url("../fonts/GorditaLight.ttf") format("truetype");
+	font-style: normal;
+	font-weight: 300;
+}
+@font-face {
+	font-family: "Gordita";
+	src: url("../fonts/GorditaMedium.ttf") format("truetype");
+	font-style: medium;
+	font-weight: 500;
+}
+/*# sourceMappingURL=succesfuul-registration-styles.css.map */
+html {
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+}
+body {
+	font-family: $font-family_1;
+	width: 100%;
+	max-width: 100%;
+}
+.main-container {
+	font-family: $font-family_1;
+	width: 100%;
+	max-width: 100%;
+	overflow-x: hidden;
+	font-family: $font-family_1;
+	background-image: url("../assets/img/bg-main-pic.png");
+	background-repeat: no-repeat;
+	background-position: top;
+	min-height: 1080px;
+	background-size: 135em;
+}
+.wrapper {
+	height: 100%;
+	width: 90%;
+	background-image: url("../assets/img/Confetti.png");
+	background-repeat: no-repeat;
+	margin: 0 auto;
+	background-position: center;
+}
+.entire-container {
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	display: flex;
+}
+.main-logo {
+	text-align: center;
+	img {
+		margin-top: 60px;
+		margin-bottom: 60px;
+		width: 170px;
+		height: 86px;
+	}
+}
+.footer {
+	position: relative;
+	bottom: 0;
+	top: 20em;
+	left: 0;
+	right: 0;
+	height: 180px;
+}
+.footer__title {
+	font-size: 14px;
+	font-weight: normal;
+	font-family: $font-family_1;
+	text-align: center;
+	color: $color_1;
+}
+.footer__subtitle {
+	font-size: 14px;
+	font-weight: normal;
+	font-family: $font-family_1;
+	text-align: center;
+	color: $color_1;
+}
+.footer__logos {
+	margin-top: 25px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.footer-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+}
+.deposit {
+	width: 205px;
+	background-color: $background-color_1;
+	color: $color_2;
+	border: 2px solid #F8D05F;
+	border-radius: 5px;
+	height: 52px;
+	font-size: 16px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.deposit-ok {
+	width: 205px;
+	background-color: $background-color_1;
+	color: $color_2;
+	border: 2px solid #F8D05F;
+	border-radius: 5px;
+	height: 52px;
+	font-size: 16px;
+	font-weight: 600;
+}
+.info-wrapper {
+	box-shadow: -1px 0px 15px 1px rgba(213, 213, 42, 0.72);
+	text-align: center;
+	width: 587px;
+	max-width: 587px;
+	border-radius: 12px;
+	background: linear-gradient(0.25turn, #350B2D, #8C5B82, #350B2D);
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 325px;
+}
+.registration-title {
+	margin-top: 60px;
+	color: $color_3;
+	font-size: 28px;
+	font-weight: 600;
+	margin-bottom: 10px;
+}
+.registration-subtitle {
+	margin-bottom: 20px;
+	color: $color_3;
+	font-size: 21px;
+	font-weight: normal;
+}
+@media (max-width: 1024px) {
+	.main-container {
+		background-size: 129em;
+	}
+}
+@media (max-width: 576px) {
+	.main-container {
+		background-size: 130em;
+	}
+}
+@media (max-width: 388px) {
+	.main-container {
+		background-size: 132em;
+	}
+}
+@media (max-width: 321px) {
+	.main-container {
+		background-size: 135em;
+	}
+}
+@media (max-width: 222px) {
+	.main-container {
+		background-size: 137em;
+	}
+}

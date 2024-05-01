@@ -89,14 +89,26 @@ body {
   padding-top: 50px;
 }
 
+.iti__selected-dial-code {
+  color: #fff;
+}
+
 .btn-submit {
   margin: 0 auto;
 }
 
 .form-wrapper {
+  margin: 0 auto;
   margin-bottom: 18px;
+  margin-left: 15px;
+  margin-right: 15px;
   display: flex;
   justify-content: center;
+  width: 100%;
+}
+
+.form-wrapper > input {
+  min-width: 250px !important;
 }
 
 .login__username,
@@ -107,7 +119,7 @@ body {
   color: #fff;
   padding: 10px;
   height: 37px;
-  width: 85%;
+  width: 250px;
 }
 
 input[type=submit] {
@@ -143,7 +155,7 @@ input[type=submit] {
   color: red;
   position: relative;
   left: 82px;
-  z-index: 99;
+  z-index: 1;
 }
 
 .required-3:after {
@@ -366,6 +378,10 @@ label {
 .registration-subtitle {
   color: #fff;
   font-size: 24px;
+}
+
+.iti__country-container, .iti__selected-country {
+  background-color: #521A49 !important;
 }
 
 .form-wrapper > div:not(:last-child) {

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="./src/sass/registration.css">    
     <link rel="stylesheet" href="./src/bootstrap-4.6/bootstrap.min.css">
     <link rel="stylesheet" href="./src/bootstrap-4.6/bootstrap-grid.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@21.2.7/build/css/intlTelInput.css">
     <title>Battle Stock</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
                 <div class="row d-flex justify-content-center w-100 form-block">
                     <form action="#" class="login login-form">
                                 
-                        <div class="row form-wrapper">
+                        <div class="row form-wrapper" style="margin: 0 auto;">
                             <div class="col-sm col-md col-lg-6 w-100 d-flex justify-content-center justify-content-md-end red-star">
                                 <label class="required"></label>
                                 <input id="first-name" class="login login__username" type="text" placeholder="First Name">
@@ -95,6 +96,13 @@
         
         </footer>
     </div>
-    
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@21.2.7/build/js/intlTelInput.min.js"></script>
+<script>
+  const input = document.querySelector("#phone");
+  window.intlTelInput(input, {
+    utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@21.2.7/build/js/utils.js",
+    showSelectedDialCode: true,
+  });
+</script>
 </body>
 </html>
