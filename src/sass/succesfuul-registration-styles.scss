@@ -52,6 +52,7 @@ body {
 	align-items: center;
 	justify-content: space-between;
 	display: flex;
+	padding: 0;
 }
 .main-logo {
 	text-align: center;
@@ -142,8 +143,8 @@ body {
 }
 @media (max-width: 1024px) {
 
-	.entire-container {
-		padding: 0;
+	.entire-container, .container {
+		padding: 0 !important;
 	}
 
 	.registration-title {
