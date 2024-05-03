@@ -1175,6 +1175,7 @@ tbody :last-child {
 
 .notification-container-with-information {
   overflow-y: scroll;
+  overflow-x: hidden;
   display: flex;
   border: none;
   background: none;
@@ -1185,6 +1186,20 @@ tbody :last-child {
   width: 90%;
   height: 228px;
   margin: 0 auto;
+}
+
+.notification-container-with-information::-webkit-scrollbar {
+  background-color: #260423;
+  width: 10px;
+  scroll-margin-top: 19px;
+}
+
+.notification-container-with-information::-webkit-scrollbar-thumb {
+  position: relative;
+  background-color: #8D4987;
+  width: 2px;
+  border-radius: 6px;
+  scroll-margin-right: 5px;
 }
 
 .notification-container_text {
