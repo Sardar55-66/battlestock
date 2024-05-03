@@ -1227,10 +1227,11 @@ tbody :last-child {
 }
 
 .players {
-  font-size: 14px;
-  font-family: "Gordita";
-  margin-top: 10px;
-  margin-bottom: 10px;
+    font-weight: 300;
+    font-size: 14px;
+    font-family: 'Gordita';
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .big-divider, .small-divider {
