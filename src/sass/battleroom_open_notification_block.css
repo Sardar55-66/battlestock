@@ -1151,7 +1151,6 @@ tbody :last-child {
 }
 
 .notification-container {
-  overflow-y: scroll;
   display: flex;
   flex-direction: column;
   align-items: center;
