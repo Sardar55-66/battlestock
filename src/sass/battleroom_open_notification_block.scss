@@ -239,6 +239,7 @@ img {
 }
 
 .pick-one-stock, .pick-three-stock {
+    min-width: 106px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -624,6 +625,9 @@ img {
 .header-button_active-status {
     background-color: #123A1C;
 }
+.desktop-active {
+    cursor: pointer;
+}
 
 
 .nav-panel_active {
@@ -684,6 +688,9 @@ img {
 }
 
 @media(max-width: 1025px) {
+    .desktop-active {
+        display: none;
+    }
     .activate {
         display: none !important;
         flex-direction: column;
@@ -698,9 +705,11 @@ img {
     }
 
     .pick-stock_mobile {
-        display: block;
+        display: flex;
         margin: 0 auto;
         margin-bottom: 10px;
+        align-items: center;
+        justify-content: center;
     }
 
     .active-mark {
@@ -1181,6 +1190,7 @@ tbody :last-child {
     font-size: 16px;
 }
 .notification-container {
+    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1188,7 +1198,7 @@ tbody :last-child {
     background-color: #2E0327;
     border: 1px solid #F8D05F;
     border-radius: 5px;
-    width: 261px;
+    width: 90%;
     height: 228px;
     margin: 0 auto;
 }
@@ -1202,6 +1212,7 @@ tbody :last-child {
 }
 
 .notification-container-with-information {
+    overflow-y: scroll;
     display: flex;
     border: none;
     background: none;
@@ -1233,6 +1244,8 @@ tbody :last-child {
     text-transform: uppercase;
 }
 .players {
+    font-size: 14px;
+    font-family: 'Gordita';
     margin-top: 10px;
     margin-bottom: 10px;
 }
@@ -1268,6 +1281,8 @@ tbody :last-child {
 }
 
 .card-submit_btn, .players-info_btn {
+    font-family: 'Gordita';
+    font-weight: 400;
     font-size: 12px;
     display: flex;
     align-items: center;
@@ -1287,6 +1302,7 @@ tbody :last-child {
     background-color: #19125D;
 }
 .start-time {
+    font-family: 'Gordita';
     margin-top: 15px;
     font-size: 12px;
 }
