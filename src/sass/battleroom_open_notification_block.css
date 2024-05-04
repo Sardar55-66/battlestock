@@ -1219,6 +1219,8 @@ tbody :last-child {
 }
 
 .notification-container_text {
+  font-family: 'Gordita';
+  font-weight: normal;
   width: 185px;
   height: 45px;
   font-size: 16px;
