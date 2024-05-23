@@ -401,7 +401,7 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     background-color: rgba(63, 4, 55, 0.90);
-    // width: 70%;
+    width: 100%;
 }
 
 .sidebar-activation {
@@ -608,9 +608,6 @@ img {
         width: 100% !important;
     }
 
-    // .left-container {
-    //     width: 100vw;
-    // }
 
     .profit-tb, .left-container__battle-restrictions, .left-container__battle-rules {
         margin-left: 15px;
@@ -747,7 +744,7 @@ img {
     }
 }
 
-// @media(max-width: 447px) {
+/* // @media(max-width: 447px) {
 //     .decrease {
 //         width: 45% !important;
 //     }
@@ -764,7 +761,7 @@ img {
 //         width: 65% !important;
 //     }
 // }
-
+ */
 
 
 @media(max-width: 450px) {
@@ -1022,7 +1019,7 @@ tbody :last-child {
 
 .elapsed {
     width: 100%;
-    padding-bottom: 80px;
+    padding-bottom: 15px;
     min-width: 310px;
     margin: 0 auto;
 }
